@@ -3,7 +3,7 @@
         "title": "Welcome to my CV / Portfolio website",
         "description": "Architecture based on React 19, TypeScript, and Tailwind CSS v4 ready for section building."
     },
-    "aboutme": {
+    "aboutMe": {
         "title": "About Me",
         "description": "A brief overview of my skills and experience."
     }

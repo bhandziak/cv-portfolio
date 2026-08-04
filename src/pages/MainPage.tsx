@@ -3,6 +3,9 @@ import { useLanguage } from '../hooks/useLanguage';
 import { LanguageSwitcher } from '../components/ui/LanguageSwitcher';
 import { ComponentWrapper } from '../components/layout/ComponentWrapper';
 
+import Welcome from '../components/sections/Welcome';
+import AboutMe from '../components/sections/AboutMe';
+
 function MainPage() {
 const { cvData, isLoading } = useLanguage();
 
@@ -21,17 +24,10 @@ const { cvData, isLoading } = useLanguage();
       </header>
 
       <ComponentWrapper id="welcome">
-        <div className="text-center pt-16">
-          <h1 className="text-4xl font-extrabold tracking-tight mb-4 text-cv-text">
-            {cvData.welcome.title}
-          </h1>
-          <p className="text-cv-subtext text-lg max-w-xl mx-auto">
-            {cvData.welcome.description}
-          </p>
-        </div>
+        <Welcome title={cvData.welcome.title} description={cvData.welcome.description} />
       </ComponentWrapper>
       <ComponentWrapper id="aboutme">
-        <></>
+        <AboutMe title={cvData.aboutMe.title} description={cvData.aboutMe.description} />
       </ComponentWrapper>
       <ComponentWrapper id="technologies">
         <></>
