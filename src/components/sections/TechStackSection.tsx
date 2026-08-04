@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import type { TechStackData, TechItem } from '../../types/cv';
+import type { TechStackData, TechItem } from '../../types/types';
 import { TechCategoryCard } from '../ui/TechCategoryCard';
 import { TechDetailsPopUp } from '../ui/TechDetailsPopUp';
 

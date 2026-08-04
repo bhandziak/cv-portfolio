@@ -6,7 +6,7 @@ import React, {
   useRef, 
   type ReactNode 
 } from 'react';
-import type { CVData } from '../types/cv';
+import type { CVData } from '../types/cvData';
 
 export type Language = 'pl' | 'en';
 
