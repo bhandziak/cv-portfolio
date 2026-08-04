@@ -124,27 +124,6 @@
             "description": "Kontrola wersji i konteneryzacja aplikacji."
           }
         ]
-      },
-            {
-        "id": "tools",
-        "title": "Narzędzia & Testy",
-        "skills": [
-          {
-            "name": "Robot Framework",
-            "highlighted": true,
-            "description": "Automatyzacja testów API oparta na słowach kluczowych."
-          },
-          {
-            "name": "pytest",
-            "highlighted": false,
-            "description": "Testy jednostkowe i integracyjne w Pythonie."
-          },
-          {
-            "name": "Git & Docker",
-            "highlighted": true,
-            "description": "Kontrola wersji i konteneryzacja aplikacji."
-          }
-        ]
       }
     ]
   }
