@@ -1,14 +1,18 @@
+@tailwind components;
 
-.tech-stack-container {
+@layer components {
+  /* MAIN CONTAINER */
+  .tech-stack-container {
     width: 100%;
     max-width: 80rem; /* 7xl */
     margin-left: auto;
     margin-right: auto;
     padding: 3rem 1rem;
     text-align: center;
-    
-    @apply p-5 rounded-2xl bg-slate-900/20 border border-slate-800 
-        backdrop-blur-md transition-all duration-300 
+    box-sizing: border-box;
+
+    @apply p-5 sm:p-8 rounded-2xl bg-slate-900/20 border border-slate-800 
+           backdrop-blur-md transition-all duration-300;
   }
 
   @media (min-width: 640px) {
@@ -18,95 +22,90 @@
     }
   }
 
-/* Category Container */
-.tech-stack-flex-container {
+  .tech-stack-header {
+    margin-bottom: 2.5rem;
+  }
+
+  /* 
+    FLEXBOX CONTAINER
+  */
+  .tech-stack-flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Center not even rows */
     align-items: stretch;
     gap: 1.5rem;
     width: 100%;
-
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-.tech-stack-header {
-    margin-bottom: 2rem;
-  }
-/* Category Card */
-.tech-category-card {
-    /* --- POZYCJONOWANIE & WYMIARY (Klasyczny CSS) --- */
-    /* Domyślnie na Mobile: pełna elastyczna szerokość kontenera */
+  /* CATEGORY CARD */
+  .tech-category-card {
     width: 100%;
-    max-width: calc(100vw - 2rem);
-    min-height: 200px;
+    min-height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
 
-    /* --- TAILWIND DEKORACJA --- */
-    @apply p-5 rounded-2xl bg-slate-900/70 border border-slate-800 
+    @apply p-6 rounded-2xl bg-slate-900/70 border border-slate-800 
            backdrop-blur-md transition-all duration-300 
            hover:border-indigo-500/40 hover:shadow-xl hover:shadow-indigo-500/10;
   }
 
-  @media (min-width: 720px) {
+  @media (min-width: 640px) {
     .tech-category-card {
-      max-width: 300px;
-      flex-shrink: 0;
+      flex: 1 1 300px;
+      max-width: 360px;
     }
   }
 
-  @media (min-width: 1000px) {
-    .tech-category-card {
-      max-width: 400px;
-      flex-shrink: 0;
-    }
-  }
-
-.tech-category-title {
+  .tech-category-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 0.625rem;
+    padding-bottom: 0.75rem;
     flex-shrink: 0;
 
     @apply text-base font-bold text-slate-200 border-b border-slate-800 tracking-wide;
   }
-.tech-category-items {
+
+  .tech-category-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;   /* Wycentrowanie ostatnich elementów w wierszu */
-    align-content: center;    /* Wycentrowanie w pionie gdy jest mało elementów */
+    justify-content: center;
+    align-content: center;
     align-items: center;
-    gap: 0.625rem;             /* gap-2.5 */
-    margin-top: 1rem;
+    gap: 0.625rem;
+    margin-top: 1.25rem;
     margin-bottom: 0.5rem;
   }
-/* Individual Tech Button */
-.tech-item-btn {
-@apply relative inline-flex items-center px-3.5 py-2 rounded-xl text-sm font-medium 
-        transition-all duration-200 cursor-pointer border text-slate-300 
-        bg-slate-800/50 border-slate-700/60 hover:bg-slate-700/60 hover:text-white 
-        hover:border-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 
-        focus:ring-offset-2 focus:ring-offset-slate-900 active:scale-95 touch-manipulation;
-}
 
-.tech-item-btn--highlighted {
-@apply bg-indigo-950/40 border-indigo-500/50 text-indigo-200 
-        hover:bg-indigo-900/50 hover:border-indigo-400 shadow-sm shadow-indigo-500/20 font-semibold;
-}
+  .tech-item-btn {
+    @apply relative inline-flex items-center px-3.5 py-2 rounded-xl text-sm font-medium 
+           transition-all duration-200 cursor-pointer border text-slate-300 
+           bg-slate-800/50 border-slate-700/60 hover:bg-slate-700/60 hover:text-white 
+           hover:border-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 
+           focus:ring-offset-2 focus:ring-offset-slate-900 active:scale-95 touch-manipulation;
+  }
 
-.tech-item-btn--active {
-@apply ring-2 ring-indigo-400 bg-indigo-600 text-white border-transparent hover:bg-indigo-500;
-}
+  .tech-item-btn--highlighted {
+    @apply bg-indigo-950/40 border-indigo-500/50 text-indigo-200 
+           hover:bg-indigo-900/50 hover:border-indigo-400 shadow-sm shadow-indigo-500/20 font-semibold;
+  }
 
-.tech-item-badge {
-@apply ml-2 w-2 h-2 rounded-full bg-indigo-400 animate-pulse;
-}
+  .tech-item-btn--active {
+    @apply ring-2 ring-indigo-400 bg-indigo-600 text-white border-transparent hover:bg-indigo-500;
+  }
 
-/* Details Box */
-.tech-details-box {
-@apply mt-8 p-6 rounded-2xl bg-slate-900 border border-indigo-500/30 
-        text-slate-200 transition-all duration-300 ease-in-out;
+  .tech-item-badge {
+    @apply ml-2 w-2 h-2 rounded-full bg-indigo-400 animate-pulse;
+  }
+
+  .tech-details-box {
+    @apply mt-8 p-6 rounded-2xl bg-slate-900 border border-indigo-500/30 
+           text-slate-200 transition-all duration-300 ease-in-out;
+  }
 }
