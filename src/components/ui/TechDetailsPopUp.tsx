@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+
 import type { TechItem } from '../../types/cv';
 
 interface TechDetailsPopUpProps {
@@ -37,7 +41,7 @@ export const TechDetailsPopUp: React.FC<TechDetailsPopUpProps> = React.memo(({ t
             className="tech-details-popup-close-btn"
             aria-label="Zamknij podgląd szczegółów"
           >
-            Zamknij (Esc)
+            <FontAwesomeIcon icon={faXmark} aria-hidden="true" />
           </button>
         </div>
         
