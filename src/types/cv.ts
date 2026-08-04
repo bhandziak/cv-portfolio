@@ -17,6 +17,12 @@ export interface TechCategory {
   skills: TechItem[];
 }
 
+export interface TechStackData {
+  title: string;
+  description: string;
+  techCategories: TechCategory[];
+}
+
 // Projects
 export interface Project {
   id: string;
@@ -53,5 +59,8 @@ export interface CVData {
     name: string;
     location: string;
     socials: { github: string; linkedin: string; email: string; phone?: string};
+  }
+  techStack: {
+    categories: TechCategory[];
   }
 }

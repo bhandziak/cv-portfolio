@@ -8,10 +8,10 @@ interface WelcomeProps {
 const Welcome: React.FC<WelcomeProps> = ({ title, description }) => {
   return (
     <div className="welcome-container">
-      <h1 className="welcome-title">
+      <h1 className="main-title">
         {title}
       </h1>
-      <p className="welcome-description">
+      <p className="main-description">
         {description}
       </p>
     </div>

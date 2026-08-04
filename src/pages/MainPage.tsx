@@ -5,6 +5,8 @@ import { ComponentWrapper } from '../components/layout/ComponentWrapper';
 
 import Welcome from '../components/sections/Welcome';
 import AboutMe from '../components/sections/AboutMe';
+import TechStackSection from '../components/sections/TechStackSection';
+
 
 function MainPage() {
 const { cvData, isLoading } = useLanguage();
@@ -30,7 +32,7 @@ const { cvData, isLoading } = useLanguage();
         <AboutMe title={cvData.aboutMe.title} description={cvData.aboutMe.description} />
       </ComponentWrapper>
       <ComponentWrapper id="technologies">
-        <></>
+        <TechStackSection data={cvData.techStack} />
       </ComponentWrapper>
       <ComponentWrapper id="projects">
         <></>
