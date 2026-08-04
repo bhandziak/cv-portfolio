@@ -6,6 +6,8 @@
 
 @import "./items/techStack.css";
 
+@import "./items/popUp.css";
+
 body {
   margin: 0;
   padding: 0;
