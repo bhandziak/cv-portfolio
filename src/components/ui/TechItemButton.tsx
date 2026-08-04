@@ -29,7 +29,6 @@ export const TechItemButton = memo(function TechItemButton({
       aria-pressed={isSelected}
     >
       <span>{name}</span>
-      {highlighted && <span className="tech-item-badge" aria-hidden="true" />}
     </button>
   );
 });

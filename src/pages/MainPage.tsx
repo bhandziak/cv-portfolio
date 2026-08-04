@@ -21,7 +21,7 @@ const { cvData, isLoading } = useLanguage();
 
   return (
     <div className="page-background">
-    <header className="lang-header">
+      <header className="lang-header">
         <LanguageSwitcher />
       </header>
 
