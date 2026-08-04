@@ -1,0 +1,20 @@
+.lang-switcher-container {
+  @apply flex items-center gap-1 rounded-lg border border-cv-border bg-cv-card p-1 transition-opacity duration-200;
+}
+
+.lang-switcher-container--pending {
+  @apply opacity-50 pointer-events-none;
+}
+
+.lang-switcher-btn {
+  @apply px-3 py-1 text-xs font-semibold rounded-md transition-all duration-400 ease-in-out cursor-pointer;
+  @apply text-cv-subtext hover:text-cv-text focus-visible:outline-2 focus-visible:outline-cv-accent;
+}
+
+.lang-switcher-btn--active {
+  @apply bg-cv-accent text-white shadow-sm cursor-default scale-105;
+}
+
+.lang-switcher-btn:disabled {
+  @apply opacity-80;
+}

@@ -1,0 +1,6 @@
+.lang-header {
+    @apply sticky top-0 z-50 backdrop-blur-md px-6 py-4 w-full;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
