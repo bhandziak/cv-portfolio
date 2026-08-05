@@ -32,7 +32,7 @@ const { cvData, isLoading } = useLanguage();
         <AboutMe title={cvData.aboutMe.title} description={cvData.aboutMe.description} />
       </ComponentWrapper>
       <ComponentWrapper id="technologies">
-        <TechStackSection data={cvData.techStack} />
+        <TechStackSection techStackData={cvData.techStack} techItemsData={cvData.techItems} projectsData={cvData.projects} />
       </ComponentWrapper>
       <ComponentWrapper id="projects">
         <></>

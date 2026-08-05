@@ -4,17 +4,18 @@ export type TechCategoryType = 'frontend' | 'backend' | 'networking' |
 
 // Structures for technologies
 export interface TechItem {
+  id: string;
   name: string;
   highlighted?: boolean;
   description?: string;
-  projects?: Project[];
+  projectIds?: string[];
 }
 
 // Categories of technologies
 export interface TechCategory {
   id: TechCategoryType;
   title: string;
-  skills: TechItem[];
+  technologyIds: string[];
 }
 
 export interface TechStackData {

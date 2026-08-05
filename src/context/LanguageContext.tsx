@@ -23,8 +23,7 @@ export const LanguageContext = createContext<LanguageContextType | undefined>(un
 const STORAGE_KEY = 'app_user_language';
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-// Use localStorage to persist the user's language preference
-    const [language, setLanguage] = useState<Language>(() => {
+  const [language, setLanguage] = useState<Language>(() => {
     const saved = localStorage.getItem(STORAGE_KEY) as Language;
     return saved === 'en' || saved === 'pl' ? saved : 'pl';
   });
@@ -33,11 +32,10 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isPending, startTransition] = useTransition();
 
-  // Cache loaded JSON data
   const cache = useRef<Map<Language, CVData>>(new Map());
 
-  // Load language data dynamically based on the selected language
-  const loadLanguageData = async (targetLang: Language) => {
+  // Load language data from ts files
+const loadLanguageData = async (targetLang: Language) => {
     if (cache.current.has(targetLang)) {
       setCvData(cache.current.get(targetLang)!);
       return;
@@ -45,13 +43,13 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
 
     setIsLoading(true);
     try {
-      const dataModule = await import(`../data/${targetLang}.json`);
-      const data: CVData = dataModule.default;
+      const dataModule = await import(`../data/cv-data-${targetLang}`);
+      const data: CVData = dataModule.cvData || dataModule.default;
 
       cache.current.set(targetLang, data);
       setCvData(data);
     } catch (error) {
-      console.error(`Nie udało się załadować danych dla języka: ${targetLang}`, error);
+      console.error(`Failed to load data for language: ${targetLang}`, error);
     } finally {
       setIsLoading(false);
     }
@@ -59,17 +57,15 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
 
   useEffect(() => {
     loadLanguageData(language);
-  }, []);
+  }, [language]);
 
-  // --- Method to change the language ---
   const changeLanguage = (newLang: Language) => {
     if (newLang === language) return;
 
     localStorage.setItem(STORAGE_KEY, newLang);
-    setLanguage(newLang);
 
     startTransition(async () => {
-      await loadLanguageData(newLang);
+      setLanguage(newLang);
     });
   };
 

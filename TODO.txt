@@ -1,0 +1,13 @@
+# Refactor TechItem, Project trzymany oddzielnie
+
+# Sekcja projekty wraz z pop upem
+    - po najechaniu odpala się gif
+    - w popupie odpala się gif
+# Sekcja doświadczenie
+    - bez pop upu
+# Sekcja kontakt
+# Przewijanie do sekcji strony - nawigacja
+
+
+# Pełne tłumaczenie komponentów
+# Dopasowanie styli - spójność

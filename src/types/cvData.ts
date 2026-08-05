@@ -1,6 +1,5 @@
-import type { TechStackData } from "./types";
+import type { TechItem, TechStackData, Project } from "./types";
 
-// Footer links and personal information
 export interface CVData {
   welcome: {
     title: string;
@@ -10,10 +9,12 @@ export interface CVData {
     title: string;
     description: string;
   };
+  techStack:  TechStackData;
+  techItems: TechItem[];
+  projects: Project[];
   personalInfo: {
-    name: string;
-    location: string;
-    socials: { github: string; linkedin: string; email: string; phone?: string};
-  }
-  techStack:  TechStackData
+  name: string;
+  location: string;
+  socials: { github: string; linkedin: string; email: string; phone?: string};
+}
 }

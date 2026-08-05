@@ -4,14 +4,15 @@ import { createPortal } from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
-import type { TechItem } from '../../types/types';
+import type { TechItem, Project } from '../../types/types';
 
 interface TechDetailsPopUpProps {
   tech: TechItem;
+  projects: Project[];
   onClose: () => void;
 }
 
-export const TechDetailsPopUp: React.FC<TechDetailsPopUpProps> = React.memo(({ tech, onClose }) => {
+export const TechDetailsPopUp: React.FC<TechDetailsPopUpProps> = React.memo(({ tech, projects, onClose }) => {
   useEffect(() => {
     const originalStyle = window.getComputedStyle(document.body).overflow;
     document.body.style.overflow = 'hidden';
@@ -49,13 +50,13 @@ export const TechDetailsPopUp: React.FC<TechDetailsPopUpProps> = React.memo(({ t
           {tech.description || 'Brak dodatkowego opisu dla tej technologii.'}
         </p>
 
-        {tech.projects && tech.projects.length > 0 && (
+        {projects.length > 0 && (
           <div className="tech-details-popup-projects-section">
             <span className="tech-details-popup-projects-label">
               Wykorzystane w projektach:
             </span>
             <ul className="tech-details-popup-projects-list">
-              {tech.projects.map((proj) => (
+              {projects.map((proj) => (
                 <li key={proj.id}>
                   <span className="tech-details-popup-project-tag">
                     {proj.title}

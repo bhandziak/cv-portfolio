@@ -4,14 +4,16 @@ import { TechItemButton } from './TechItemButton';
 
 interface TechCategoryCardProps {
   category: TechCategory;
-  selectedTech: TechItem | null;
-  onSelectTech: (item: TechItem) => void;
+  selectedTechId: string | null;
+  onSelectTech: (techId: string) => void;
+  techItemsMap: Map<string, TechItem>;
 }
 
 export const TechCategoryCard = memo(function TechCategoryCard({
   category,
-  selectedTech,
+  selectedTechId,
   onSelectTech,
+  techItemsMap,
 }: TechCategoryCardProps) {
   return (
     <article className="tech-category-card">
@@ -20,14 +22,19 @@ export const TechCategoryCard = memo(function TechCategoryCard({
           {category.title}
         </h3>
         <div className="tech-category-items">
-          {category.skills.map((skill) => (
-            <TechItemButton
-              key={skill.name}
-              item={skill}
-              isSelected={selectedTech?.name === skill.name}
-              onClick={onSelectTech}
-            />
-          ))}
+          {category.technologyIds.map((techId) => {
+            const item = techItemsMap.get(techId);
+            if (!item) return null;
+
+            return (
+              <TechItemButton
+                key={item.id}
+                item={item}
+                isSelected={selectedTechId === item.id}
+                onClick={() => onSelectTech(item.id)}
+              />
+            );
+          })}
         </div>
       </div>
     </article>
