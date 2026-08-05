@@ -114,7 +114,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           {description}
         </p>
       </header>
-
+      <div className="contact-column">
       <div className="contact-column-list">
         {contactItems.map((item) => {
           const rowInner = (
@@ -143,6 +143,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             </div>
           );
         })}
+      </div>
       </div>
     </section>
   );

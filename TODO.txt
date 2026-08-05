@@ -1,9 +1,4 @@
-# Sekcja projekty wraz z pop upem
-    - po najechaniu odpala się gif
-    - w popupie odpala się gif
-# Sekcja doświadczenie
-    - bez pop upu
-# Sekcja kontakt
+# Działający przycisk do przewijania i zaznaczenia projektu
 # Przewijanie do sekcji strony - nawigacja
 
 

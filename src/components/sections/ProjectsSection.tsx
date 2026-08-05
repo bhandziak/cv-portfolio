@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useMemo, Suspense } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import type { Project, TechItem } from '../../types/types';
 import { ProjectCard } from '../ui/project/ProjectCard';
 import type { ProjectsText } from '../../types/cvData';
