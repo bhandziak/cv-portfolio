@@ -131,13 +131,16 @@ export const cvData: CVData = {
       id: "cyberguard",
       title: "CyberGuard",
       description: "Aplikacja edukacyjna do symulacji ataków phishingowych.",
-      technologies: ["React", "TypeScript", "Tailwind CSS"],
+      technologyIds: ["react-19", "typescript", "tailwind-css"],
     },
     {
       id: "omega-chat",
       title: "Omega chat irc",
       description: "Dedykowana aplikacja czatu WebSocket z odświeżaniem tokenów.",
-      technologies: ["C#", "WebSocket", "React"],
+      technologyIds: ["csharp-dotnet", "websocket-irc", "react-19"],
     },
   ],
+  projectsText: {
+    title: "Projekty",
+  },
 };

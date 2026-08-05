@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { type TechItem } from '../../types/types';
+import { type TechItem } from '../../../types/types';
 
 interface TechItemButtonProps {
   item: TechItem;

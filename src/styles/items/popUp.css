@@ -31,6 +31,8 @@ html {
 
 .tech-details-popup-description {
   @apply text-sm text-slate-300 leading-relaxed;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .tech-details-popup-projects-section {

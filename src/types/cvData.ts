@@ -12,9 +12,20 @@ export interface CVData {
   techStack:  TechStackData;
   techItems: TechItem[];
   projects: Project[];
-  personalInfo: {
-  name: string;
-  location: string;
-  socials: { github: string; linkedin: string; email: string; phone?: string};
+  projectsText: ProjectsText;
+  personalInfo: PersonalInfo;
 }
+
+export interface ProjectsText {
+  title: string;
 }
+
+export interface PersonalInfo {
+    name: string;
+    location: string;
+    socials: SocialLinks;
+}
+
+export interface SocialLinks {
+   github: string; linkedin: string; email: string; phone?: string
+  };

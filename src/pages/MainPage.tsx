@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLanguage } from '../hooks/useLanguage';
 import { LanguageSwitcher } from '../components/ui/LanguageSwitcher';
 import { ComponentWrapper } from '../components/layout/ComponentWrapper';
@@ -6,6 +5,7 @@ import { ComponentWrapper } from '../components/layout/ComponentWrapper';
 import Welcome from '../components/sections/Welcome';
 import AboutMe from '../components/sections/AboutMe';
 import TechStackSection from '../components/sections/TechStackSection';
+import { ProjectsSection } from '../components/sections/ProjectsSection';
 
 
 function MainPage() {
@@ -35,7 +35,7 @@ const { cvData, isLoading } = useLanguage();
         <TechStackSection techStackData={cvData.techStack} techItemsData={cvData.techItems} projectsData={cvData.projects} />
       </ComponentWrapper>
       <ComponentWrapper id="projects">
-        <></>
+        <ProjectsSection projectsText={cvData.projectsText} projectsData={cvData.projects} techItemsData={cvData.techItems} />
       </ComponentWrapper>
       <ComponentWrapper id="experience">
         <></>

@@ -29,8 +29,8 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  technologies: string[];
-  iconURL?: string;
+  technologyIds: string[];
+  thumbnailURL?: string;
   animationURL?: string;
   githubURL?: string;
   demoURL?: string;
@@ -44,5 +44,7 @@ export interface ExperienceItem {
   period: string;
   description: string[];
   technologies: string[];
+  projectIds?: string[];
+  isVisible?: boolean;
 }
 

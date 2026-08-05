@@ -1,5 +1,5 @@
-import React, { memo } from 'react';
-import type { TechCategory, TechItem } from '../../types/types';
+import { memo } from 'react';
+import type { TechCategory, TechItem } from '../../../types/types';
 import { TechItemButton } from './TechItemButton';
 
 interface TechCategoryCardProps {

@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import type { TechStackData, TechItem, Project } from '../../types/types';
-import { TechCategoryCard } from '../ui/TechCategoryCard';
-import { TechDetailsPopUp } from '../ui/TechDetailsPopUp';
+import { TechCategoryCard } from '../ui/technology/TechCategoryCard';
+import { TechDetailsPopUp } from '../ui/technology/TechDetailsPopUp';
 
 interface TechStackSectionProps {
   techStackData: TechStackData;

@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
-import type { TechItem, Project } from '../../types/types';
+import type { TechItem, Project } from '../../../types/types';
 
 interface TechDetailsPopUpProps {
   tech: TechItem;
