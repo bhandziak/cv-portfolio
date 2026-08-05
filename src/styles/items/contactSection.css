@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Contact Section Styles (Kolumnowe, Stały Rozmiar)
+   ========================================================================== */
+
+/* Kontener główny wierszy - zawsze ścisła kolumna */
+.contact-column-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 540px; /* Kompaktowa, optymalna szerokość dla list jednokolumnowych */
+  margin: 0 auto;
+}
+
+/* Pojedynczy wiersz - stała wysokość i identyczne paddingi dla każdego wpisu */
+.contact-row-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1.25rem;
+  height: 4.5rem; /* Gwarantuje identyczny rozmiar dla wszystkich kart */
+  box-sizing: border-box;
+  border-radius: 0.875rem;
+  text-align: left;
+  text-decoration: none;
+  
+  @apply bg-slate-900/70 border border-slate-800 backdrop-blur-md 
+         transition-all duration-200;
+}
+
+/* Stan interaktywny tylko dla elementów klikalnych (linków) */
+.contact-row-link {
+  @apply hover:border-indigo-500/40 hover:bg-slate-800/80 
+         hover:shadow-lg hover:shadow-indigo-500/10 cursor-pointer;
+}
+
+.contact-row-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.625rem;
+  flex-shrink: 0;
+  
+  @apply bg-indigo-950/60 border border-indigo-800/50 text-indigo-400;
+}
+
+.contact-row-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.contact-row-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted, #64748b);
+}
+
+.contact-row-value {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary, #f8fafc);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contact-row-link:hover .contact-row-value {
+  color: var(--accent-hover, #60a5fa);
+}

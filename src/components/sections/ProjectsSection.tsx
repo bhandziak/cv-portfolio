@@ -54,13 +54,13 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
 
   return (
     <section className="projects-container py-12 px-4 md:px-8" id="projects" aria-labelledby="projects-heading">
-      <header className="projects-header mb-10 text-center">
+      <header className="projects-header text-center">
         <h2 id="projects-heading" className="text-3xl font-bold mb-4">
           {projectsText.title}
         </h2>
       </header>
 
-      <div className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="projects-container">
         {projectsData.map((project) => (
           <ProjectCard
             key={project.id}
@@ -72,13 +72,11 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
       </div>
 
       {selectedProject && (
-        <Suspense fallback={<div className="fixed inset-0 z-50 bg-black/60 flex justify-center items-center"><div className="animate-spin text-white">Ładowanie...</div></div>}>
           <LazyProjectDetailsPopUp 
             project={selectedProject}
             techItemsMap={techMap}
             onClose={handleCloseProjectDetails} 
           />
-        </Suspense>
       )}
     </section>
   );

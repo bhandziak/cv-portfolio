@@ -2,7 +2,6 @@ import type { CVData } from "../types/cvData";
 
 export const cvData: CVData = {
   personalInfo: {
-    name: "Bartek",
     location: "Kraków, Polska",
     socials: {
       github: "https://github.com",
@@ -138,7 +137,7 @@ export const cvData: CVData = {
       title: "Omega chat irc",
       description: "Dedykowana aplikacja czatu WebSocket z odświeżaniem tokenów.",
       technologyIds: ["csharp-dotnet", "websocket-irc", "react-19"],
-    },
+    }
   ],
   projectsText: {
     title: "Projekty",

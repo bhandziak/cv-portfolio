@@ -22,7 +22,6 @@ export interface ProjectsText {
 }
 
 export interface PersonalInfo {
-    name: string;
     location: string;
     socials: SocialLinks;
 }

@@ -8,6 +8,8 @@
 
 @import "./items/popUp.css";
 
+@import "./items/contactSection.css";
+
 body {
   margin: 0;
   padding: 0;

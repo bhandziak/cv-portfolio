@@ -2,7 +2,6 @@ import type { CVData } from "../types/cvData";
 
 export const cvData: CVData = {
   personalInfo: {
-    name: "Bartek",
     location: "Kraków, Poland",
     socials: {
       github: "https://github.com",
