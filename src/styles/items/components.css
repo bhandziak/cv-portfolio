@@ -1,3 +1,5 @@
+@import '../colors.css';
+
 .lang-header {
   @apply fixed top-0 left-0 right-0 z-50
          flex justify-end items-center px-6 py-4 w-full;
@@ -26,4 +28,88 @@
 
 .second-description {
 @apply text-cv-subtext text-base sm:text-lg leading-relaxed space-y-4;
+}
+
+.experience-card-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+    grid-template-rows: 1fr;
+}
+.experience-content-inner {
+  overflow: hidden;
+}
+
+
+.experience-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+
+  @apply p-6 rounded-2xl bg-slate-900/70 border border-slate-800 
+          backdrop-blur-md transition-all duration-300 
+          hover:border-indigo-500/40 hover:shadow-xl hover:shadow-indigo-500/10;
+}
+
+.experience-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.experience-company {
+  color: var(--text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.experience-period {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.experience-content-inner {
+  overflow: hidden;
+  padding-top: 0;
+  transition: padding-top 0.3s ease;
+  text-align: left;
+  margin-top: 0.75rem;
+}
+.experience-description {
+  margin: 0 0 1.25rem 0;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toggle-hidden-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary, #d4d4d8);
+  background-color: var(--bg-surface-elevated, rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  user-select: none;
+}
+
+.toggle-hidden-btn:hover {
+  color: var(--text-primary, #ffffff);
+  background-color: var(--bg-surface-hover, rgba(255, 255, 255, 0.1));
+  border-color: var(--accent-color, #646cff);
+  transform: translateY(-1px);
 }

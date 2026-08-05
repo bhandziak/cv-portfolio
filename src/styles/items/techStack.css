@@ -91,6 +91,10 @@
            focus:ring-offset-2 focus:ring-offset-slate-900 active:scale-95 touch-manipulation;
   }
 
+  .notclickable {
+    @apply cursor-default;
+  }
+
   .tech-item-btn--highlighted {
     @apply bg-indigo-950/40 border-indigo-500/50 text-indigo-200 
            hover:bg-indigo-900/50 hover:border-indigo-400 shadow-sm shadow-indigo-500/20 font-semibold;

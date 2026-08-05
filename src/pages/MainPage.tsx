@@ -6,6 +6,7 @@ import Welcome from '../components/sections/Welcome';
 import AboutMe from '../components/sections/AboutMe';
 import TechStackSection from '../components/sections/TechStackSection';
 import { ProjectsSection } from '../components/sections/ProjectsSection';
+import ExperienceSection from '../components/sections/ExperienceSection';
 
 
 function MainPage() {
@@ -38,7 +39,7 @@ const { cvData, isLoading } = useLanguage();
         <ProjectsSection projectsText={cvData.projectsText} projectsData={cvData.projects} techItemsData={cvData.techItems} />
       </ComponentWrapper>
       <ComponentWrapper id="experience">
-        <></>
+        <ExperienceSection title={"Experience"} experiencesData={cvData.experience} />
       </ComponentWrapper>
       <ComponentWrapper id="contact">
         <></>

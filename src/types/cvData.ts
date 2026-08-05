@@ -1,4 +1,4 @@
-import type { TechItem, TechStackData, Project } from "./types";
+import type { TechItem, TechStackData, Project, ExperienceItem } from "./types";
 
 export interface CVData {
   welcome: {
@@ -14,6 +14,7 @@ export interface CVData {
   projects: Project[];
   projectsText: ProjectsText;
   personalInfo: PersonalInfo;
+  experience: ExperienceItem[];
 }
 
 export interface ProjectsText {
@@ -28,4 +29,4 @@ export interface PersonalInfo {
 
 export interface SocialLinks {
    github: string; linkedin: string; email: string; phone?: string
-  };
+};

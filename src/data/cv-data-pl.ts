@@ -143,4 +143,48 @@ export const cvData: CVData = {
   projectsText: {
     title: "Projekty",
   },
+  experience: [
+  {
+    id: 'exp-1',
+    role: 'Full-Stack Developer',
+    company: 'Tech Solutions Sp. z o.o.',
+    period: '2024 - Obecnie',
+    description: [
+      'Projektowanie i rozwój skalowalnych aplikacji internetowych w oparciu o .NET Core i React z TypeScript.',
+      'Implementacja bezpiecznych protokołów komunikacji oraz optymalizacja architektur opartych o REST i WebSockets.',
+      'Tworzenie testów automatycznych API przy użyciu frameworka Robot Framework i pytest, co zmniejszyło liczbę regresji o 30%.'
+    ],
+    technologies: ['.NET Core', 'C#', 'React', 'TypeScript', 'Tailwind CSS', 'Robot Framework', 'WebSockets'],
+    projectIds: ['proj-omega-irc', 'proj-cyberguard'],
+    isVisible: true,
+  },
+  {
+    id: 'exp-2',
+    role: 'Junior Backend Developer',
+    company: 'CyberSoft Systems',
+    period: '2023 - 2024',
+    description: [
+      'Rozwijanie mikrousług w Java Spring Boot z wykorzystaniem ORM Hibernate do obsługi bazy danych PostgreSQL.',
+      'Analiza ruchu sieciowego i logów za pomocą Wireshark w celu identyfikacji wąskich gardeł w komunikacji sieciowej.',
+      'Współpraca w zespole programistycznym w metodologii Agile/Scrum nad bezpiecznymi rozwiązaniami webowymi.'
+    ],
+    technologies: ['Java', 'Spring Boot', 'Hibernate', 'PostgreSQL', 'Wireshark', 'REST API', 'Git'],
+    projectIds: ['proj-backend-core'],
+    isVisible: false,
+  },
+  {
+    id: 'exp-3',
+    role: 'Software Developer Intern',
+    company: 'Network Labs',
+    period: '2022 - 2023',
+    description: [
+      'Implementacja wysoce wydajnych modułów sieciowych w języku C z wykorzystaniem gniazd (sockets).',
+      'Automatyzacja procesów testowych oraz pisanie skryptów pomocniczych w języku Python.',
+      'Uczestnictwo w konfiguracji urządzeń brzegowych i zapór sieciowych (Firewall).'
+    ],
+    technologies: ['C', 'Python', 'FastAPI', 'Linux', 'Network Sockets', 'Bash'],
+    projectIds: [],
+    isVisible: false,
+  },
+]
 };

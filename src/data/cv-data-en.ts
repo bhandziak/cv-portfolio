@@ -145,4 +145,5 @@ export const cvData: CVData = {
   projectsText: {
     title: "Projects",
   },
+  experience: []
 };
