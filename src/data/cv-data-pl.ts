@@ -7,6 +7,7 @@ export const cvData: CVData = {
       github: "https://github.com",
       linkedin: "https://linkedin.com",
       email: "bartek@example.com",
+      phone: "+48 123 456 789",
     },
   },
   welcome: {

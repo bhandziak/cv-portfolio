@@ -4,11 +4,11 @@
 
 @import "./items/components.css";
 
-@import "./items/techStack.css";
+@import "./sections/techStack.css";
 
 @import "./items/popUp.css";
 
-@import "./items/contactSection.css";
+@import "./sections/contactSection.css";
 
 body {
   margin: 0;
