@@ -30,8 +30,8 @@ export const cvData: CVData = {
     },
     experience: {
       title: "Doświadczenie",
-      showMoreLabel: "Pokaż ukryte",
-      showLessLabel: "Ukryj archiwalne",
+      showMoreLabel: "Pokaż więcej",
+      showLessLabel: "Ukryj",
     },
     contact: {
       title: "Kontakt",
