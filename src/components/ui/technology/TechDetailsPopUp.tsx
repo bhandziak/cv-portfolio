@@ -10,9 +10,10 @@ interface TechDetailsPopUpProps {
   tech: TechItem;
   projects: Project[];
   onClose: () => void;
+  onSelectProject?: (project: string) => void;
 }
 
-export const TechDetailsPopUp: React.FC<TechDetailsPopUpProps> = React.memo(({ tech, projects, onClose }) => {
+export const TechDetailsPopUp: React.FC<TechDetailsPopUpProps> = React.memo(({ tech, projects, onClose, onSelectProject }) => {
   useEffect(() => {
     const originalStyle = window.getComputedStyle(document.body).overflow;
     document.body.style.overflow = 'hidden';
@@ -22,6 +23,13 @@ export const TechDetailsPopUp: React.FC<TechDetailsPopUpProps> = React.memo(({ t
     };
   }, []);
 
+  const handleProjectClick = (projectId: string) => {
+    // Call the onSelectProject callback if provided
+    if (onSelectProject) {
+      onSelectProject(projectId);
+    }
+  }
+  
   const modalContent = (
     <div 
       className="tech-details-overlay animate-fadeIn"
@@ -58,9 +66,13 @@ export const TechDetailsPopUp: React.FC<TechDetailsPopUpProps> = React.memo(({ t
             <ul className="tech-details-popup-projects-list">
               {projects.map((proj) => (
                 <li key={proj.id}>
-                  <span className="tech-details-popup-project-tag">
-                    {proj.title}
-                  </span>
+                  <button
+                    type="button"
+                    onClick={() => handleProjectClick(proj.id)}
+                    className="tech-details-popup-project-tag"
+                  >
+                    Zobacz: {proj.title}
+                  </button>
                 </li>
               ))}
             </ul>

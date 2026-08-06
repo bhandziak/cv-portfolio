@@ -46,6 +46,51 @@ export const TechStackSection: React.FC<TechStackSectionProps> = ({
     setSelectedTechId(null);
   }, []);
 
+  // SCROLL TO PROJECT CARD AND HIGHLIGHT
+  const handleSelectProject = useCallback((projectId: string) => {
+    // Close the tech details popup first
+    setSelectedTechId(null);
+
+    // Scroll to the project card and highlight it
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        const targetElement = document.getElementById(`project-${projectId}`);
+        if (!targetElement) return;
+
+        const triggerHighlight = () => {
+          targetElement.classList.add('project-card-highlight');
+          
+          targetElement.addEventListener(
+            'animationend',
+            () => targetElement.classList.remove('project-card-highlight'),
+            { once: true }
+          );
+        };
+
+        if ('onscrollend' in window) {
+          const handleScrollEnd = () => {
+            triggerHighlight();
+            window.removeEventListener('scrollend', handleScrollEnd);
+          };
+          window.addEventListener('scrollend', handleScrollEnd, { once: true });
+        } else {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              if (entries[0].isIntersecting) {
+                setTimeout(triggerHighlight, 150);
+                observer.disconnect();
+              }
+            },
+            { threshold: 0.6 }
+          );
+          observer.observe(targetElement);
+        }
+
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 50);
+    });
+  }, []);
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -89,7 +134,8 @@ export const TechStackSection: React.FC<TechStackSectionProps> = ({
         <TechDetailsPopUp 
           tech={selectedTech}
           projects={selectedProjects} 
-          onClose={handleCloseTechDetails} 
+          onClose={handleCloseTechDetails}
+          onSelectProject={handleSelectProject} 
         />
       )}
     </section>

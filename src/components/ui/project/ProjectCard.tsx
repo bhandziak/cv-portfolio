@@ -27,6 +27,7 @@ export const ProjectCard = memo(function ProjectCard({
 
   return (
     <article
+      id={`project-${project.id}`} // Scroll target
       className="project-card transition-transform hover:scale-105 cursor-pointer"
       onClick={() => onClick(project)}
       onKeyDown={handleKeyDown}
