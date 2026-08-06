@@ -1,1 +1,15 @@
 # Dopasowanie styli - spójność
+
+# Projekty:
+    - Kombinat messenger
+    - 2D space shooter
+    - Kościuszkon projekt
+    - PUS: IRC chat
+    - Testowanie op
+    - Chmura
+    - WPAI
+    - PZ
+    - .NET
+    - JAVA
+    - SO
+    - Jipp2
