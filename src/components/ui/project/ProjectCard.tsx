@@ -63,11 +63,9 @@ export const ProjectCard = memo(function ProjectCard({
 
             return (
               <div key={techItem.id} className="pointer-events-none scale-90 origin-left">
-                <TechItemButton
-                  item={techItem}
-                  isSelected={false} 
-                  onClick={() => {}} 
-                />
+                <span className="tech-item-btn notclickable">
+                  {techItem.name}
+                </span>
               </div>
             );
           })}

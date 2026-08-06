@@ -59,12 +59,9 @@ const ProjectDetailsPopUp: React.FC<ProjectDetailsPopUpProps> = React.memo(({
             {project.technologyIds?.map((techId) => {
               const techItem = techItemsMap.get(techId);
               return techItem ? (
-                <TechItemButton 
-                  key={techItem.id} 
-                  item={techItem} 
-                  isSelected={false} 
-                  onClick={() => {}} 
-                />
+                <span key={techItem.id} className="tech-item-btn notclickable">
+                  {techItem.name}
+                </span>
               ) : null;
             })}
           </div>

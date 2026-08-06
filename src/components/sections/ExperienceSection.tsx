@@ -34,8 +34,6 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
         <h2 id="experience-heading" className="second-title">
           {title}
         </h2>
-
-        
       </header>
 
       <div className="experience-list-container flex-column-layout">
