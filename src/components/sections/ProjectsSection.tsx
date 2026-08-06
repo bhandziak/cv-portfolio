@@ -1,13 +1,12 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import type { Project, TechItem } from '../../types/types';
 import { ProjectCard } from '../ui/project/ProjectCard';
-import type { ProjectsText } from '../../types/cvData';
 
 // LAZY LOAD of pop-up
 const LazyProjectDetailsPopUp = React.lazy(() => import('../ui/project/ProjectDetailsPopUp'));
 
 interface ProjectsSectionProps {
-  projectsText: ProjectsText;
+  projectsText: {title: string; usedTechnologiesLabel: string;};
   projectsData: Project[];
   techItemsData?: TechItem[];
 }
@@ -72,7 +71,8 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
       </div>
 
       {selectedProject && (
-          <LazyProjectDetailsPopUp 
+          <LazyProjectDetailsPopUp
+            usedTechnologiesLabel={projectsText.usedTechnologiesLabel}
             project={selectedProject}
             techItemsMap={techMap}
             onClose={handleCloseProjectDetails} 

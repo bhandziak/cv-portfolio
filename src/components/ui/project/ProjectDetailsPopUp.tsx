@@ -4,15 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faCode, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 import type { Project, TechItem } from '../../../types/types';
-import { TechItemButton } from '../technology/TechItemButton';
 
 interface ProjectDetailsPopUpProps {
+  usedTechnologiesLabel: string;
   project: Project;
   techItemsMap: Map<string, TechItem>;
   onClose: () => void;
 }
 
 const ProjectDetailsPopUp: React.FC<ProjectDetailsPopUpProps> = React.memo(({ 
+  usedTechnologiesLabel,
   project, 
   techItemsMap, 
   onClose 
@@ -53,7 +54,7 @@ const ProjectDetailsPopUp: React.FC<ProjectDetailsPopUpProps> = React.memo(({
 
         <div className="tech-details-popup-projects-section">
             <span className="tech-details-popup-projects-label">
-              Zastosowane technologie:
+              {usedTechnologiesLabel}:
             </span>
           <div className="flex flex-wrap gap-2">
             {project.technologyIds?.map((techId) => {

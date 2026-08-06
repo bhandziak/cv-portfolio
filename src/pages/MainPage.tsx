@@ -21,63 +21,76 @@ function MainPage() {
   const sections = useMemo<SectionConfig[]>(() => {
     if (!cvData) return [];
 
+    const { texts, techCategories, techItems, projects, experience, personalInfo } = cvData;
+
     return [
       {
         id: 'welcome',
-        label: 'Start',
+        label: texts.navigation.welcome,
         component: (
           <Welcome
-            title={cvData.welcome.title}
-            description={cvData.welcome.description}
+            title={texts.welcome.title}
+            description={texts.welcome.description}
           />
         ),
       },
       {
         id: 'aboutme',
-        label: 'O mnie',
+        label: texts.navigation.aboutMe,
         component: (
           <AboutMe
-            title={cvData.aboutMe.title}
-            description={cvData.aboutMe.description}
+            title={texts.aboutMe.title}
+            description={texts.aboutMe.description}
           />
         ),
       },
       {
         id: 'technologies',
-        label: 'Technologie',
+        label: texts.navigation.techStack,
         component: (
           <TechStackSection
-            techStackData={cvData.techStack}
-            techItemsData={cvData.techItems}
-            projectsData={cvData.projects}
+            title={texts.techStack.title}
+            description={texts.techStack.description}
+            usedInProjectsLabel={texts.techStack.usedInProjectsLabel}
+            seeLabel={texts.techStack.seeLabel}
+            techCategories={techCategories}
+            techItemsData={techItems}
+            projectsData={projects}
           />
         ),
       },
       {
         id: 'projects',
-        label: 'Projekty',
+        label: texts.navigation.projects,
         component: (
           <ProjectsSection
-            projectsText={cvData.projectsText}
-            projectsData={cvData.projects}
-            techItemsData={cvData.techItems}
+            projectsText={texts.projects}
+            projectsData={projects}
+            techItemsData={techItems}
           />
         ),
       },
       {
         id: 'experience',
-        label: 'Doświadczenie',
+        label: texts.navigation.experience,
         component: (
           <ExperienceSection
-            title="Experience"
-            experiencesData={cvData.experience}
+            title={texts.experience.title}
+            showMoreLabel={texts.experience.showMoreLabel}
+            showLessLabel={texts.experience.showLessLabel}
+            experiencesData={experience}
           />
         ),
       },
       {
         id: 'contact',
-        label: 'Kontakt',
-        component: <ContactSection personalInfo={cvData.personalInfo} />,
+        label: texts.navigation.contact,
+        component: (
+          <ContactSection
+            contactText={texts.contact}
+            personalInfo={personalInfo}
+          />
+        ),
       },
     ];
   }, [cvData]);

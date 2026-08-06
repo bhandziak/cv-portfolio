@@ -1,20 +1,27 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
-import type { TechStackData, TechItem, Project } from '../../types/types';
+import type { TechItem, Project, TechCategory } from '../../types/types';
 import { TechCategoryCard } from '../ui/technology/TechCategoryCard';
 import { TechDetailsPopUp } from '../ui/technology/TechDetailsPopUp';
 
 interface TechStackSectionProps {
-  techStackData: TechStackData;
+  title: string;
+  description: string;
+  usedInProjectsLabel: string;
+  seeLabel: string;
+  techCategories: TechCategory[];
   techItemsData?: TechItem[];
   projectsData?: Project[];
 }
 
 export const TechStackSection: React.FC<TechStackSectionProps> = ({ 
-  techStackData, 
+  title,
+  description,
+  usedInProjectsLabel,
+  seeLabel,
+  techCategories = [],
   techItemsData = [], 
   projectsData = [] 
 }) => {
-  const { title, description, techCategories } = techStackData;
 
   const [selectedTechId, setSelectedTechId] = useState<string | null>(null);
 
@@ -135,7 +142,9 @@ export const TechStackSection: React.FC<TechStackSectionProps> = ({
           tech={selectedTech}
           projects={selectedProjects} 
           onClose={handleCloseTechDetails}
-          onSelectProject={handleSelectProject} 
+          onSelectProject={handleSelectProject}
+          usedInProjectsLabel={usedInProjectsLabel}
+          seeLabel={seeLabel}
         />
       )}
     </section>

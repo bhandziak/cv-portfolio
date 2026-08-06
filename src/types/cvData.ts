@@ -1,25 +1,56 @@
-import type { TechItem, TechStackData, Project, ExperienceItem } from "./types";
+import type { TechItem, Project, ExperienceItem, TechCategory} from "./types";
 
 export interface CVData {
-  welcome: {
-    title: string;
-    description: string;
+  texts: {
+    navigation: {
+      welcome: string;
+      aboutMe: string;
+      techStack: string;
+      projects: string;
+      experience: string;
+      contact: string;
+    };
+    welcome: {
+      title: string;
+      description: string;
+    };
+    aboutMe: {
+      title: string;
+      description: string;
+    };
+    techStack: {
+      title: string;
+      description: string;
+      usedInProjectsLabel: string;
+      seeLabel: string;
+    };
+    projects: {
+      title: string;
+      usedTechnologiesLabel: string;
+    };
+    experience: {
+      title: string;
+      showMoreLabel: string;
+      showLessLabel: string;
+    };
+    contact: {
+      title: string;
+      description: string;
+      phoneLabel: string;
+      locationLabel: string;
+      showLabel:string;
+    }
   };
-  aboutMe: {
-    title: string;
-    description: string;
-  };
-  techStack:  TechStackData;
+
+  techCategories:  TechCategory[];
   techItems: TechItem[];
+
   projects: Project[];
-  projectsText: ProjectsText;
+
   personalInfo: PersonalInfo;
   experience: ExperienceItem[];
 }
 
-export interface ProjectsText {
-  title: string;
-}
 
 export interface PersonalInfo {
     location: string;

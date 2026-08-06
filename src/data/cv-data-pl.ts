@@ -1,49 +1,70 @@
 import type { CVData } from "../types/cvData";
 
 export const cvData: CVData = {
-  personalInfo: {
-    location: "Kraków, Polska",
-    socials: {
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-      email: "bartek@example.com",
-      phone: "+48 123 456 789",
+  texts: {
+    navigation: {
+      welcome: "Start",
+      aboutMe: "O mnie",
+      techStack: "Technologie",
+      projects: "Projekty",
+      experience: "Doświadczenie",
+      contact: "Kontakt",
+    },
+    welcome: {
+      title: "Witaj, jestem Bartek – Frontend Developer",
+      description: "Student Politechniki Krakowskiej (3. rok, kierunek Informatyka).",
+    },
+    aboutMe: {
+      title: "O mnie",
+      description: "Krótki opis moich umiejętności i doświadczenia.",
+    },
+    techStack: {
+      title: "Stos technologiczny",
+      description: "Technologie, z którymi pracowałem i które znam.",
+      usedInProjectsLabel: "Wykorzystano w projektach",
+      seeLabel: "Zobacz",
+    },
+    projects: {
+      title: "Projekty",
+      usedTechnologiesLabel: "Użyte technologie",
+    },
+    experience: {
+      title: "Doświadczenie",
+      showMoreLabel: "Pokaż ukryte",
+      showLessLabel: "Ukryj archiwalne",
+    },
+    contact: {
+      title: "Kontakt",
+      description: "Masz pytanie lub chcesz nawiązać współpracę? Skontaktuj się ze mną bezpośrednio.",
+      phoneLabel: "Telefon",
+      locationLabel: "Lokalizacja",
+      showLabel: "Pokaż"
     },
   },
-  welcome: {
-    title: "Witaj jestem Bartek, Frontend Developer",
-    description: "Student Politechniki Krakowskiej, 3 rok, kierunek Informatyka.",
-  },
-  aboutMe: {
-    title: "O mnie",
-    description: "Krótki opis moich umiejętności i doświadczenia.",
-  },
-  techStack: {
-    title: "Stos technologiczny",
-    description: "Technologie, z którymi pracowałem i które znam.",
-    techCategories: [
-      {
-        id: "frontend",
-        title: "Frontend",
-        technologyIds: ["react-19", "typescript", "tailwind-css", "next-js"],
-      },
-      {
-        id: "backend",
-        title: "Backend",
-        technologyIds: ["csharp-dotnet", "java-spring", "python-fastapi"],
-      },
-      {
-        id: "networking",
-        title: "Network & Security",
-        technologyIds: ["websocket-irc", "wireshark-tls", "watchguard"],
-      },
-      {
-        id: "tools",
-        title: "Narzędzia & Testy",
-        technologyIds: ["robot-framework", "pytest", "git-docker"],
-      },
-    ],
-  },
+
+  techCategories: [
+    {
+      id: "frontend",
+      title: "Frontend",
+      technologyIds: ["react-19", "typescript", "tailwind-css", "next-js"],
+    },
+    {
+      id: "backend",
+      title: "Backend",
+      technologyIds: ["csharp-dotnet", "java-spring", "python-fastapi"],
+    },
+    {
+      id: "networking",
+      title: "Network & Security",
+      technologyIds: ["websocket-irc", "wireshark-tls", "watchguard"],
+    },
+    {
+      id: "tools",
+      title: "Narzędzia & Testy",
+      technologyIds: ["robot-framework", "pytest", "git-docker"],
+    },
+  ],
+
   techItems: [
     {
       id: "react-19",
@@ -126,6 +147,7 @@ export const cvData: CVData = {
       description: "Kontrola wersji i konteneryzacja aplikacji.",
     },
   ],
+
   projects: [
     {
       id: "cyberguard",
@@ -138,53 +160,61 @@ export const cvData: CVData = {
       title: "Omega chat irc",
       description: "Dedykowana aplikacja czatu WebSocket z odświeżaniem tokenów.",
       technologyIds: ["csharp-dotnet", "websocket-irc", "react-19"],
-    }
+    },
   ],
-  projectsText: {
-    title: "Projekty",
+
+  personalInfo: {
+    location: "Kraków, Polska",
+    socials: {
+      github: "https://github.com",
+      linkedin: "https://linkedin.com",
+      email: "bartek@example.com",
+      phone: "+48 123 456 789",
+    },
   },
+
   experience: [
-  {
-    id: 'exp-1',
-    role: 'Full-Stack Developer',
-    company: 'Tech Solutions Sp. z o.o.',
-    period: '2024 - Obecnie',
-    description: [
-      'Projektowanie i rozwój skalowalnych aplikacji internetowych w oparciu o .NET Core i React z TypeScript.',
-      'Implementacja bezpiecznych protokołów komunikacji oraz optymalizacja architektur opartych o REST i WebSockets.',
-      'Tworzenie testów automatycznych API przy użyciu frameworka Robot Framework i pytest, co zmniejszyło liczbę regresji o 30%.'
-    ],
-    technologies: ['.NET Core', 'C#', 'React', 'TypeScript', 'Tailwind CSS', 'Robot Framework', 'WebSockets'],
-    projectIds: ['proj-omega-irc', 'proj-cyberguard'],
-    isVisible: true,
-  },
-  {
-    id: 'exp-2',
-    role: 'Junior Backend Developer',
-    company: 'CyberSoft Systems',
-    period: '2023 - 2024',
-    description: [
-      'Rozwijanie mikrousług w Java Spring Boot z wykorzystaniem ORM Hibernate do obsługi bazy danych PostgreSQL.',
-      'Analiza ruchu sieciowego i logów za pomocą Wireshark w celu identyfikacji wąskich gardeł w komunikacji sieciowej.',
-      'Współpraca w zespole programistycznym w metodologii Agile/Scrum nad bezpiecznymi rozwiązaniami webowymi.'
-    ],
-    technologies: ['Java', 'Spring Boot', 'Hibernate', 'PostgreSQL', 'Wireshark', 'REST API', 'Git'],
-    projectIds: ['proj-backend-core'],
-    isVisible: false,
-  },
-  {
-    id: 'exp-3',
-    role: 'Software Developer Intern',
-    company: 'Network Labs',
-    period: '2022 - 2023',
-    description: [
-      'Implementacja wysoce wydajnych modułów sieciowych w języku C z wykorzystaniem gniazd (sockets).',
-      'Automatyzacja procesów testowych oraz pisanie skryptów pomocniczych w języku Python.',
-      'Uczestnictwo w konfiguracji urządzeń brzegowych i zapór sieciowych (Firewall).'
-    ],
-    technologies: ['C', 'Python', 'FastAPI', 'Linux', 'Network Sockets', 'Bash'],
-    projectIds: [],
-    isVisible: false,
-  },
-]
+    {
+      id: "exp-1",
+      role: "Full-Stack Developer",
+      company: "Tech Solutions Sp. z o.o.",
+      period: "2024 - Obecnie",
+      description: [
+        "Projektowanie i rozwój skalowalnych aplikacji internetowych w oparciu o .NET Core i React z TypeScript.",
+        "Implementacja bezpiecznych protokołów komunikacji oraz optymalizacja architektur opartych o REST i WebSockets.",
+        "Tworzenie testów automatycznych API przy użyciu frameworka Robot Framework i pytest, co zmniejszyło liczbę regresji o 30%.",
+      ],
+      technologies: [".NET Core", "C#", "React", "TypeScript", "Tailwind CSS", "Robot Framework", "WebSockets"],
+      projectIds: ["omega-chat", "cyberguard"],
+      isVisible: true,
+    },
+    {
+      id: "exp-2",
+      role: "Junior Backend Developer",
+      company: "CyberSoft Systems",
+      period: "2023 - 2024",
+      description: [
+        "Rozwijanie mikrousług w Java Spring Boot z wykorzystaniem ORM Hibernate do obsługi bazy danych PostgreSQL.",
+        "Analiza ruchu sieciowego i logów za pomocą Wireshark w celu identyfikacji wąskich gardeł w komunikacji sieciowej.",
+        "Współpraca w zespole programistycznym w metodologii Agile/Scrum nad bezpiecznymi rozwiązaniami webowymi.",
+      ],
+      technologies: ["Java", "Spring Boot", "Hibernate", "PostgreSQL", "Wireshark", "REST API", "Git"],
+      projectIds: [],
+      isVisible: false,
+    },
+    {
+      id: "exp-3",
+      role: "Software Developer Intern",
+      company: "Network Labs",
+      period: "2022 - 2023",
+      description: [
+        "Implementacja wysoce wydajnych modułów sieciowych w języku C z wykorzystaniem gniazd (sockets).",
+        "Automatyzacja procesów testowych oraz pisanie skryptów pomocniczych w języku Python.",
+        "Uczestnictwo w konfiguracji urządzeń brzegowych i zapór sieciowych (Firewall).",
+      ],
+      technologies: ["C", "Python", "FastAPI", "Linux", "Network Sockets", "Bash"],
+      projectIds: [],
+      isVisible: false,
+    },
+  ],
 };

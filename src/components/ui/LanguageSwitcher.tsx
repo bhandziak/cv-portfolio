@@ -8,7 +8,6 @@ export const LanguageSwitcher: React.FC = () => {
     <div 
       className={`lang-switcher-container ${isPending ? 'lang-switcher-container--pending' : ''}`}
       role="group"
-      aria-label="Wybór języka / Language selection"
     >
       <button
         type="button"

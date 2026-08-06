@@ -18,12 +18,6 @@ export interface TechCategory {
   technologyIds: string[];
 }
 
-export interface TechStackData {
-  title: string;
-  description: string;
-  techCategories: TechCategory[];
-}
-
 // Projects
 export interface Project {
   id: string;

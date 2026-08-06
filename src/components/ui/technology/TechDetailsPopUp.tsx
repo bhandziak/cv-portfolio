@@ -9,11 +9,15 @@ import type { TechItem, Project } from '../../../types/types';
 interface TechDetailsPopUpProps {
   tech: TechItem;
   projects: Project[];
+  usedInProjectsLabel : string
+  seeLabel : string
   onClose: () => void;
   onSelectProject?: (project: string) => void;
 }
 
-export const TechDetailsPopUp: React.FC<TechDetailsPopUpProps> = React.memo(({ tech, projects, onClose, onSelectProject }) => {
+export const TechDetailsPopUp: React.FC<TechDetailsPopUpProps> = React.memo(({ 
+  tech, projects, usedInProjectsLabel, seeLabel, onClose, onSelectProject
+ }) => {
   useEffect(() => {
     const originalStyle = window.getComputedStyle(document.body).overflow;
     document.body.style.overflow = 'hidden';
@@ -48,20 +52,19 @@ export const TechDetailsPopUp: React.FC<TechDetailsPopUpProps> = React.memo(({ t
             type="button"
             onClick={onClose}
             className="tech-details-popup-close-btn"
-            aria-label="Zamknij podgląd szczegółów"
           >
             <FontAwesomeIcon icon={faXmark} aria-hidden="true" />
           </button>
         </div>
         
         <p className="tech-details-popup-description">
-          {tech.description || 'Brak dodatkowego opisu dla tej technologii.'}
+          {tech.description}
         </p>
 
         {projects.length > 0 && (
           <div className="tech-details-popup-projects-section">
             <span className="tech-details-popup-projects-label">
-              Wykorzystane w projektach:
+              {usedInProjectsLabel}
             </span>
             <ul className="tech-details-popup-projects-list">
               {projects.map((proj) => (
@@ -71,7 +74,7 @@ export const TechDetailsPopUp: React.FC<TechDetailsPopUpProps> = React.memo(({ t
                     onClick={() => handleProjectClick(proj.id)}
                     className="tech-details-popup-project-tag"
                   >
-                    Zobacz: {proj.title}
+                    {seeLabel}: {proj.title}
                   </button>
                 </li>
               ))}

@@ -1,35 +1,36 @@
-import React, { useState, useMemo, useCallback } from 'react';
 import type { ExperienceItem } from '../../types/types';
 import { ExperienceCard } from '../ui/experience/ExperienceCard';
+import { useState } from 'react';
 
 interface ExperienceSectionProps {
   title: string;
-  experiencesData: ExperienceItem[];
+  showMoreLabel: string;
+  showLessLabel: string;
+  experiencesData?: ExperienceItem[];
 }
 
-export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
+export const ExperienceSection = ({
   title,
+  showMoreLabel,
+  showLessLabel,
   experiencesData = [],
-}) => {
+}: ExperienceSectionProps) => {
   const [showHidden, setShowHidden] = useState(false);
-
-  const hiddenCount = useMemo(() => {
-    return experiencesData.filter((exp) => exp.isVisible === false).length;
-  }, [experiencesData]);
-
-  const displayedExperiences = useMemo(() => {
-    if (showHidden) return experiencesData;
-    return experiencesData.filter((exp) => exp.isVisible !== false);
-  }, [experiencesData, showHidden]);
-
-  const handleToggleShowHidden = useCallback(() => {
-    setShowHidden((prev) => !prev);
-  }, []);
 
   if (experiencesData.length === 0) return null;
 
+  const hiddenExperiences = experiencesData.filter((exp) => exp.isVisible === false);
+  const hiddenCount = hiddenExperiences.length;
+
+  const displayedExperiences = showHidden
+    ? experiencesData
+    : experiencesData.filter((exp) => exp.isVisible !== false);
+
   return (
-    <section className="tech-stack-container experience-container" id="experience" aria-labelledby="experience-heading">
+    <section 
+      className="tech-stack-container experience-container" 
+      aria-labelledby="experience-heading"
+    >
       <header className="tech-stack-header">
         <h2 id="experience-heading" className="second-title">
           {title}
@@ -44,16 +45,17 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({
           />
         ))}
       </div>
+
       {hiddenCount > 0 && (
-          <button
-            type="button"
-            className="toggle-hidden-btn"
-            onClick={handleToggleShowHidden}
-            aria-expanded={showHidden}
-          >
-            {showHidden ? 'Ukryj archiwalne' : `Pokaż ukryte (${hiddenCount})`}
-          </button>
-        )}
+        <button
+          type="button"
+          className="toggle-hidden-btn"
+          onClick={() => setShowHidden((prev) => !prev)}
+          aria-expanded={showHidden}
+        >
+          {showHidden ? showLessLabel : `${showMoreLabel} (${hiddenCount})`}
+        </button>
+      )}
     </section>
   );
 };

@@ -11,9 +11,10 @@ export interface ContactItem {
 
 interface PersonalInfoTileProps {
   item: ContactItem;
+  showText: string;
 }
 
-export const PersonalInfoTile: React.FC<PersonalInfoTileProps> = ({ item }) => {
+export const PersonalInfoTile: React.FC<PersonalInfoTileProps> = ({ item, showText }) => {
   const [isRevealed, setIsRevealed] = useState(!item.isSensitive);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -44,7 +45,7 @@ export const PersonalInfoTile: React.FC<PersonalInfoTileProps> = ({ item }) => {
             onClick={handleReveal} 
             className="contact-reveal-button toggle-hidden-btn"
           >
-            Pokaż
+            {showText}
           </button>
         )}
       </div>
