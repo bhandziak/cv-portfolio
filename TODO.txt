@@ -1,6 +1,3 @@
-# Działający przycisk do przewijania i zaznaczenia projektu
-# Przewijanie do sekcji strony - nawigacja
-
 
 # Pełne tłumaczenie komponentów
 # Dopasowanie styli - spójność
