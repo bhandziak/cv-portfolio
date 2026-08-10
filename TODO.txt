@@ -1,15 +1,15 @@
 # Dopasowanie styli - spójność
 
 # Projekty:
-    - Kombinat messenger
-    - 2D space shooter
-    - Kościuszkon projekt
-    - PUS: IRC chat
-    - Testowanie op
-    - Chmura
-    - WPAI
-    - PZ
-    - .NET
-    - JAVA
-    - SO
-    - Jipp2
+    - Kombinat messenger - frontend w react.js + SignalR
+    - 2D space shooter - unity android
+    - Kościuszkon projekt (środowisko treningowe z oszustami AI po chacie z olx itp) - React.js + .NET + api key od gemini
+    - PUS: IRC chat - React.js + Java Spring + WebSocket
+    - Testowanie oprogramowania - RobotFramework, pytest
+    - Chmura - Terraform + Ansible
+    - WDPAI (quiz z otwarzaczem mp3) - clear PHP + JS + HTML + CSS
+    - PZ (gra typu clicker) - Unity windows
+    - .NET (CRUD - serwis samochodowy) - .NET , React, MS SQL
+    - JAVA (space invaders) - Java, libGDX
+    - SO (symulacja przychodni z problemem rywalizacja procesów o zasoby) - C, Zagadnienia systomewe linux (Semafory itp)
+    - Jipp2 (VI + czytnik nut ala midi) - C++, SFML 

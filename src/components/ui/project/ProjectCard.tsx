@@ -39,18 +39,22 @@ export const ProjectCard = memo(function ProjectCard({
     >
       <div className="project-card-media-wrapper overflow-hidden rounded-t-lg aspect-video relative bg-gray-100">
         {isHovered && project.animationURL ? (
-           <img 
-             src={project.animationURL} 
-             alt={`${project.title} animacja`} 
-             className="absolute inset-0 w-full h-full object-cover animate-fadeIn"
-             loading="eager"
-           />
+          <video
+            src={project.animationURL}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover animate-fadeIn"
+          />
         ) : (
-          <img 
-            src={project.thumbnailURL} 
-            alt={project.title} 
+          <img
+            src={project.thumbnailURL}
+            alt={project.title}
             className="absolute inset-0 w-full h-full object-cover"
-            loading="lazy" 
+            loading="lazy"
           />
         )}
       </div>
