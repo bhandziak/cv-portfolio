@@ -2,6 +2,7 @@ import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import type { TechItem, Project, TechCategory } from '../../types/types';
 import { TechCategoryCard } from '../ui/technology/TechCategoryCard';
 import { TechDetailsPopUp } from '../ui/technology/TechDetailsPopUp';
+import { useTechProjects } from '../../hooks/useTechProjects';
 
 interface TechStackSectionProps {
   title: string;
@@ -30,19 +31,9 @@ export const TechStackSection: React.FC<TechStackSectionProps> = ({
     return new Map<string, TechItem>(techItemsData.map((tech) => [tech.id, tech]));
   }, [techItemsData]);
 
-  const projectsMap = useMemo(() => {
-    return new Map<string, Project>(projectsData.map((proj) => [proj.id, proj]));
-  }, [projectsData]);
-
   // SELECTED TECH AND PROJECTS
+  const selectedProjects = useTechProjects(projectsData, selectedTechId ?? '');
   const selectedTech = selectedTechId ? techMap.get(selectedTechId) ?? null : null;
-
-  const selectedProjects = useMemo(() => {
-    if (!selectedTech?.projectIds) return [];
-    return selectedTech.projectIds
-      .map((id) => projectsMap.get(id))
-      .filter((proj): proj is Project => proj !== undefined);
-  }, [selectedTech, projectsMap]);
 
   // HANDLERS
   const handleSelectTech = useCallback((techId: string) => {

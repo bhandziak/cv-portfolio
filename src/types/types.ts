@@ -1,5 +1,11 @@
-export type TechCategoryType = 'frontend' | 'backend' | 'networking' |
-     'tools' | 'database' | 'other';
+export type TechCategoryType = 
+  | 'frontend' 
+  | 'backend' 
+  | 'network_security' 
+  | 'testing_tools' 
+  | 'devops_databases' 
+  | 'gamedev' 
+  | 'languages';
 
 
 // Structures for technologies
@@ -8,7 +14,6 @@ export interface TechItem {
   name: string;
   highlighted?: boolean;
   description?: string;
-  projectIds?: string[];
 }
 
 // Categories of technologies
