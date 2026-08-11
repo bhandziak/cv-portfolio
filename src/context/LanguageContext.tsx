@@ -3,7 +3,6 @@ import React, {
   useState, 
   useEffect, 
   useTransition, 
-  useRef, 
   type ReactNode 
 } from 'react';
 import { cvData as cvDataPl } from '../data/cv-data-pl';
