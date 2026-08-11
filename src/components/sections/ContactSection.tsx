@@ -20,7 +20,7 @@ export const ContactSection = ({
   contactText,
 }: ContactSectionProps) => {
   const { location, socials } = personalInfo;
-  const { title, description, phoneLabel, locationLabel } = contactText;
+  const { title, description, locationLabel } = contactText;
 
   const contactItems: ContactItem[] = [];
 

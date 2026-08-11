@@ -1,6 +1,5 @@
 import { memo, useState, useCallback } from 'react';
 import type { Project, TechItem } from '../../../types/types';
-import { TechItemButton } from '../technology/TechItemButton';
 
 interface ProjectCardProps {
   project: Project;

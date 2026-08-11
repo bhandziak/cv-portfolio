@@ -1,4 +1,3 @@
-import React from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import MainPage from './pages/MainPage';
 
