@@ -43,7 +43,6 @@ export interface ExperienceItem {
   period: string;
   description: string[];
   technologies: string[];
-  projectIds?: string[];
   isVisible?: boolean;
 }
 

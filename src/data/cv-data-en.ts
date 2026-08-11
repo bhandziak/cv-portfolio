@@ -11,209 +11,389 @@ export const cvData: CVData = {
       contact: "Contact",
     },
     welcome: {
-      title: "Hi, I'm Bartek – Frontend Developer",
-      description: "Computer Science Student at Cracow University of Technology (3rd year).",
+      title: "Hi, I'm Bartek",
+      description: "Computer Science Student (3rd year at CUT) | Frontend Developer",
     },
     aboutMe: {
       title: "About Me",
-      description: "A short overview of my skills, experience, and development background.",
+      description: "I am a 6th-semester Computer Science student at Cracow University of Technology. I am developing my skills in software engineering, with a primary focus on building web applications using React. I craft applications emphasizing clean code readability, architectural scalability, and user experience. Concurrently, I expand my expertise in system administration, networking, and IT security, gaining practical experience with Windows and Linux systems, network devices, as well as QA and automation tools. In my daily workflow, I leverage AI tools to maintain high efficiency.",
     },
     techStack: {
       title: "Tech Stack",
-      description: "Technologies and tools I work with and specialize in.",
+      description: "Technologies I work with.",
       usedInProjectsLabel: "Used in projects",
       seeLabel: "View",
     },
     projects: {
       title: "Projects",
       usedTechnologiesLabel: "Technologies used",
+      codeOnGithubLabel: "Code on GitHub",
+      demoLinkLabel: "See Live Demo"
     },
     experience: {
       title: "Experience",
       showMoreLabel: "Show more",
-      showLessLabel: "Hide",
+      showLessLabel: "Show less"
     },
     contact: {
       title: "Contact",
-      description: "Have a question or want to work together? Feel free to reach out directly.",
+      description: "Have a question or looking to collaborate? Feel free to contact me directly.",
       phoneLabel: "Phone",
       locationLabel: "Location",
-      showLabel: "Show"
+      showLabel: "Show",
     },
   },
 
   techCategories: [
     {
-      id: "frontend",
-      title: "Frontend",
-      technologyIds: ["react-19", "typescript", "tailwind-css", "next-js"],
+      id: 'frontend',
+      title: 'Frontend',
+      technologyIds: ['react', 'js', 'ts', 'html-css', 'figma']
     },
     {
-      id: "backend",
-      title: "Backend",
-      technologyIds: ["csharp-dotnet", "java-spring", "python-fastapi"],
+      id: 'backend',
+      title: 'Backend & Core',
+      technologyIds: ['csharp-dotnet', 'java', 'cpp-c', 'python', 'php']
     },
     {
-      id: "networking",
-      title: "Network & Security",
-      technologyIds: ["websocket-irc", "wireshark-tls", "watchguard"],
+      id: 'network_security',
+      title: 'Network & Security',
+      technologyIds: ['cisco', 'watchguard', 'win-lin-server']
     },
     {
-      id: "tools",
-      title: "Tools & Testing",
-      technologyIds: ["robot-framework", "pytest", "git-docker"],
+      id: 'testing_tools',
+      title: 'Testing & Tools',
+      technologyIds: ['git-docker', 'docker', 'robot-framework']
     },
+    {
+      id: 'devops_databases',
+      title: 'DevOps & Databases',
+      technologyIds: ['terraform-ansible', 'sql-postgres', 'mongodb']
+    },
+    {
+      id: 'gamedev',
+      title: 'Game Dev',
+      technologyIds: ['unity', 'java-libgdx', 'cpp-sfml']
+    },
+    {
+      id: 'languages',
+      title: 'Languages',
+      technologyIds: ['pl', 'en']
+    }
   ],
 
   techItems: [
     {
-      id: "react-19",
-      name: "React 19",
-      highlighted: true,
-      description: "Building modular applications using modern hooks and features.",
-      projectIds: ["cyberguard"],
-    },
-    {
-      id: "typescript",
-      name: "TypeScript",
-      highlighted: true,
-      description: "Static typing and clean code architecture.",
-    },
-    {
-      id: "tailwind-css",
-      name: "Tailwind CSS",
-      highlighted: true,
-      description: "Rapid, consistent styling with a utility-first approach.",
-    },
-    {
-      id: "next-js",
-      name: "Next.js",
+      id: 'react',
+      name: 'React.js',
+      description: 'Building functional components and architecture following component reusability patterns. Proficiency in JSX/TSX syntax, conditional rendering, prop drilling prevention, and state management using Context API and Providers. Custom and built-in hooks usage. Routing setup via React Router. Backend integration using Fetch API, Axios, React Query, WebSocket, and SignalR.',
       highlighted: false,
-      description: "Hybrid rendering strategies (SSR/SSG).",
     },
     {
-      id: "csharp-dotnet",
-      name: "C# / .NET Core",
-      highlighted: true,
-      description: "Developing high-performance Web APIs and Minimal APIs.",
-    },
-    {
-      id: "java-spring",
-      name: "Java / Spring Boot",
+      id: 'js',
+      name: 'JS',
+      description: 'Vanilla JS (OOP), DOM manipulation.',
       highlighted: false,
-      description: "Enterprise backend architecture and ORM with Hibernate.",
     },
     {
-      id: "python-fastapi",
-      name: "Python / FastAPI",
+      id: 'ts',
+      name: 'TS',
+      description: 'Interfaces, type system, typing React components.',
       highlighted: false,
-      description: "Lightweight microservices and automation scripting.",
     },
     {
-      id: "websocket-irc",
-      name: "WebSocket / IRC",
-      highlighted: true,
-      description: "Implementing custom real-time communication protocols.",
-      projectIds: ["omega-chat"],
-    },
-    {
-      id: "wireshark-tls",
-      name: "Wireshark / TLS 1.3",
+      id: 'html-css',
+      name: 'HTML5/CSS3',
+      description: 'Building responsive structures and modern layouts.',
       highlighted: false,
-      description: "Packet analysis and secure data tunnel inspection.",
     },
     {
-      id: "watchguard",
-      name: "WatchGuard Firebox",
+      id: 'figma',
+      name: 'Figma',
+      description: 'User Interface (UI/UX) design and prototyping.',
       highlighted: false,
-      description: "Firewall rule management and network administration.",
     },
     {
-      id: "robot-framework",
-      name: "Robot Framework",
-      highlighted: true,
-      description: "Keyword-driven API test automation.",
-    },
-    {
-      id: "pytest",
-      name: "pytest",
+      id: 'csharp-dotnet',
+      name: 'C# / .NET',
+      description: 'Building REST API architecture within the ASP.NET Core ecosystem. Implementing game mechanics and performance optimization in Unity. Applying DI, SOLID principles, design patterns, async programming, ORM mapping, and JWT tokens.',
       highlighted: false,
-      description: "Unit and integration testing in Python.",
     },
     {
-      id: "git-docker",
-      name: "Git & Docker",
-      highlighted: true,
-      description: "Version control and containerized deployment workflow.",
+      id: 'java',
+      name: 'Java',
+      description: 'Building Spring Boot REST API architectures. Experience with libGDX library and Gradle.',
+      highlighted: false,
     },
+    {
+      id: 'cpp-c',
+      name: 'C++ / C',
+      description: 'Linux programming environment. Multiprocess programming focusing on resource race conditions, process synchronization, semaphores, shared memory, named pipes (FIFO). OOP, SFML, GUI programming, DLL libraries.',
+      highlighted: false,
+    },
+    {
+      id: 'python',
+      name: 'Python',
+      description: 'Machine Learning, data processing, ML models, Google Cloud environment.',
+      highlighted: false,
+    },
+    {
+      id: 'php',
+      name: 'PHP',
+      description: 'MVC architecture, PostgreSQL integration.',
+      highlighted: false,
+    },
+    {
+      id: 'cisco',
+      name: 'CISCO Network Devices',
+      description: 'Configuring CISCO routers via CLI.',
+      highlighted: false,
+    },
+    {
+      id: 'watchguard',
+      name: 'WatchGuard Firewall',
+      description: 'Firewall policies, proxy, VPN, network security configuration.',
+      highlighted: false,
+    },
+    {
+      id: 'win-lin-server',
+      name: 'Windows Server / Linux Server',
+      description: 'Server service administration, Web servers, DHCP, user accounts and access permissions.',
+      highlighted: false,
+    },
+    {
+      id: 'git-docker',
+      name: 'Git / Docker',
+      description: 'Code versioning, branching strategies for team collaboration, GitHub Pages deployments.',
+      highlighted: false,
+    },
+    {
+      id: 'docker',
+      name: 'Docker',
+      description: 'Containerizing projects with Docker. Service isolation for backend, frontend, and databases.',
+      highlighted: false,
+    },
+    {
+      id: 'robot-framework',
+      name: 'Robot Framework',
+      description: 'E2E test automation, drafting test scenarios based on documentation and REST API specifications.',
+      highlighted: false,
+    },
+    {
+      id: 'terraform-ansible',
+      name: 'Terraform / Ansible',
+      description: 'Infrastructure as Code (IaC), Google Cloud Platform, VM provisioning and management.',
+      highlighted: false,
+    },
+    {
+      id: 'sql-postgres',
+      name: 'MS SQL Server, PostgreSQL',
+      description: 'Database schema design, ERD modeling, stored procedures, triggers, transactions. ACID principles compliance.',
+      highlighted: false,
+    },
+    {
+      id: 'mongodb',
+      name: 'MongoDB',
+      description: 'Collections, documents, data filtering, and aggregation.',
+      highlighted: false,
+    },
+    {
+      id: 'unity',
+      name: 'Unity',
+      description: 'Developing 2D games (space shooters, clickers). Understanding component systems, scene management, 2D physics, UI, animations, and lifecycle execution order. Procedural map generation, multiplayer networking with Mirror, target platforms: Android and Windows.',
+      highlighted: false,
+    },
+    {
+      id: 'java-libgdx',
+      name: 'Java libGDX',
+      description: '2D game development, asset management, project automation using Gradle.',
+      highlighted: false,
+    },
+    {
+      id: 'cpp-sfml',
+      name: 'C++ SFML',
+      description: 'GUI implementation and event handling. Handling graphic and audio assets.',
+      highlighted: false,
+    },
+    {
+      id: 'pl',
+      name: 'Polish',
+      description: 'Native',
+      highlighted: false,
+    },
+    {
+      id: 'en',
+      name: 'English',
+      description: 'C1 level. Fluent spoken and written communication, including technical documentation and IT terminology.',
+      highlighted: false,
+    },
+    { id: 'signalr', name: 'SignalR', highlighted: false },
+    { id: 'axios', name: 'Axios', highlighted: false },
+    { id: 'mirror', name: 'Mirror', highlighted: false },
+    { id: 'tailwind', name: 'Tailwind CSS', highlighted: false },
+    { id: 'gemini-api', name: 'AI Integration / Gemini API', highlighted: false },
+    { id: 'websocket', name: 'WebSocket', highlighted: false },
+    { id: 'ef-core', name: 'Entity Framework Core', highlighted: false },
+    { id: 'github-actions', name: 'GitHub Actions', highlighted: false },
+    { id: 'gcp', name: 'Google Cloud Platform (GCP)', highlighted: false },
+    { id: 'wordpress', name: 'WordPress', highlighted: false },
+    { id: 'mysql', name: 'MySQL', highlighted: false },
+    { id: 'rest-api', name: 'REST API', highlighted: false },
+    { id: 'gradle', name: 'Gradle', highlighted: false }
   ],
 
   projects: [
     {
-      id: "cyberguard",
-      title: "CyberGuard",
-      description: "Educational web application simulating phishing attacks and scam scenarios.",
-      technologyIds: ["react-19", "typescript", "tailwind-css"],
+      id: 'komunikator-czatowy',
+      title: 'Chat Messenger',
+      description: '1-on-1 chat platform built in collaboration with a partner, where I was responsible for frontend implementation. Features include user registration, JWT-based authentication, and friend list management. Built with React.js using SignalR for real-time communication.',
+      technologyIds: ['js', 'react', 'signalr', 'axios', 'html-css'],
+      thumbnailURL: 'images/comunicator.png',
+      animationURL: 'video/kombinat.mp4',
+      githubURL: 'https://github.com/RadoslawSmoronski/communicator',
+      demoURL: 'https://communicator.rsmoronski.pl'
     },
     {
-      id: "omega-chat",
-      title: "Omega chat irc",
-      description: "Custom WebSocket chat application featuring automatic token refresh logic.",
-      technologyIds: ["csharp-dotnet", "websocket-irc", "react-19"],
+      id: '2d-space-shooter',
+      title: '2D Space Shooter',
+      description: '2D space shooter game developed in Unity for Android. Gameplay revolves around clearing enemy waves with increasing difficulty. Supports cooperative multiplayer via the Mirror library. Features a lobby system for creating and joining rooms over LAN, alongside procedural map generation.',
+      technologyIds: ['csharp-dotnet', 'unity', 'mirror'],
+      thumbnailURL: 'images/space_shooter.png',
+      animationURL: 'video/space_shooter.mp4',
+      githubURL: 'https://github.com/Aneiv/2d-shooter-project'
     },
+    {
+      id: 'awerly',
+      title: 'Awerly',
+      description: 'Team project developed during a hackathon using React.js and ASP.NET Core. An educational platform for cyber threat awareness, integrating AI models via the Gemini API. Features include simulated marketplace conversations (e.g., OLX style) where users analyze exchanges to spot potential scammers, as well as email and SMS spam/threat evaluation.',
+      technologyIds: ['csharp-dotnet', 'react', 'ts', 'tailwind', 'gemini-api'],
+      thumbnailURL: 'images/awerly.png',
+      animationURL: 'video/awerly.mp4',
+      githubURL: 'https://github.com/cherries-kosciuszkon/kosciuszkon'
+    },
+    {
+      id: 'irc-chat',
+      title: 'IRC Chat',
+      description: 'Team project implementing a real-time IRC chat application using React and asynchronous communication via a custom low-level WebSocket client. Utilizes a custom communication protocol over WebSocket transport and JWT session management. Responsible for the frontend layer and protocol design.',
+      technologyIds: ['react', 'ts', 'java', 'websocket'],
+      thumbnailURL: 'images/chat_irc.png',
+      animationURL: 'video/irc_chat.mp4',
+      githubURL: 'https://github.com/bhandziak/PUS-projekt-koncowy'
+    },
+    {
+      id: 'system-zarzadzania-warsztatem',
+      title: 'Auto Repair Shop Management System',
+      description: 'CRUD web application created in a two-person team using React.js, ASP.NET Core, and MS SQL. System handles management of clients, vehicles, repair orders, parts inventory, and analytical reports with role-based access control (RBAC).',
+      technologyIds: ['react', 'csharp-dotnet', 'sql-postgres', 'ef-core', 'github-actions'],
+      thumbnailURL: 'images/car_mechanic.png',
+      animationURL: '',
+      githubURL: 'https://github.com/bhandziak/Politechnika---.NET/tree/api/development'
+    },
+    {
+      id: 'chmura',
+      title: 'Cloud Infrastructure',
+      description: 'Automated cloud infrastructure design and deployment on Google Cloud Platform using Terraform and Ansible for resource provisioning and configuration management. Deployed a containerized Docker environment hosting a WordPress instance and MySQL database.',
+      technologyIds: ['terraform-ansible', 'docker', 'gcp', 'wordpress', 'mysql'],
+      thumbnailURL: 'images/cloud.png',
+      animationURL: '',
+      githubURL: 'https://github.com/bhandziak/Chmura-Terraform-Blog'
+    },
+    {
+      id: 'epc-simulator-robot-tests',
+      title: 'EPC Simulator Robot Tests',
+      description: 'Test automation project using Robot Framework and Python for E2E test scenario creation targeting an EPC network system simulator. Scenarios were drafted against REST API endpoints and technical documentation.',
+      technologyIds: ['robot-framework', 'python', 'rest-api'],
+      thumbnailURL: 'images/test.png',
+      animationURL: '',
+      githubURL: 'https://github.com/bhandziak/EPC-Similator-Robot-Tests'
+    },
+    {
+      id: 'space-invaders',
+      title: 'Space Invaders',
+      description: 'Team project 2D arcade game written in Java using libGDX framework and Gradle build tool.',
+      technologyIds: ['java-libgdx', 'java', 'gradle'],
+      thumbnailURL: 'images/space_invaders.png',
+      animationURL: 'video/space_invaders.mp4',
+      githubURL: 'https://github.com/bhandziak/Space_Invaders_Jav'
+    },
+    {
+      id: 'symulacja-przychodni',
+      title: 'Medical Clinic Simulation',
+      description: 'Linux C application addressing classic OS synchronization challenges: process contention over shared resources. Built a simulation leveraging process synchronization mechanisms and multithreading using semaphores, shared memory, and named pipes (FIFO).',
+      technologyIds: ['cpp-c'],
+      thumbnailURL: 'images/hospital.png',
+      animationURL: '',
+      githubURL: 'https://github.com/bhandziak/Przychodnia_SO'
+    }
   ],
 
   personalInfo: {
-    location: "Krakow, Poland",
+    location: "Kraków, Poland",
     socials: {
       github: "https://github.com",
       linkedin: "https://linkedin.com",
       email: "bartek@example.com",
-      phone: "+48 123 456 789",
     },
   },
 
   experience: [
     {
-      id: "exp-1",
-      role: "Full-Stack Developer",
-      company: "Tech Solutions Sp. z o.o.",
-      period: "2024 - Present",
+      id: "kosciuszkon",
+      role: "Participant",
+      company: "Cracow University of Technology",
+      period: "May 2026",
       description: [
-        "Architecting and developing scalable web applications using .NET Core and React with TypeScript.",
-        "Implementing secure communication protocols and optimizing REST and WebSocket-based APIs.",
-        "Authoring automated API tests with Robot Framework and pytest, cutting regression issues by 30%.",
+        "Collaborated in a 3-person team to design and implement an AI-powered educational application.",
+        "Created a safe training environment for recognizing scam attempts, spam, and malicious communications.",
+        "Hackathon theme: 'Cyber Security Awareness'."
       ],
-      technologies: [".NET Core", "C#", "React", "TypeScript", "Tailwind CSS", "Robot Framework", "WebSockets"],
-      projectIds: ["omega-chat", "cyberguard"],
+      technologies: ['C# / .NET', 'React.js', 'TS', 'Tailwind', 'AI Integration / Gemini API'],
       isVisible: true,
     },
     {
-      id: "exp-2",
-      role: "Junior Backend Developer",
-      company: "CyberSoft Systems",
-      period: "2023 - 2024",
+      id: "husty",
+      role: "Engineering Intern",
+      company: "HUSTY M. Styczeń J. Hupert",
+      period: "August 2020",
       description: [
-        "Developed microservices in Java Spring Boot using Hibernate ORM connected to PostgreSQL.",
-        "Analyzed network traffic and communication logs using Wireshark to resolve bottlenecks.",
-        "Collaborated in an Agile/Scrum software development team deliver secure web solutions.",
+        "Installed leak and flood detection systems for commercial and residential clients.",
+        "Programmed and tested control unit circuit boards.",
+        "Soldered electronic components."
       ],
-      technologies: ["Java", "Spring Boot", "Hibernate", "PostgreSQL", "Wireshark", "REST API", "Git"],
-      projectIds: [],
+      technologies: [],
+      isVisible: true,
+    },
+    {
+      id: "bonito",
+      role: "Warehouse Worker",
+      company: "Bonito",
+      period: "October 2025 - Present",
+      description: [
+        "Order fulfillment, packaging, and warehouse management operations."
+      ],
+      technologies: [],
       isVisible: false,
     },
     {
-      id: "exp-3",
-      role: "Software Developer Intern",
-      company: "Network Labs",
-      period: "2022 - 2023",
+      id: "juwentus",
+      role: "Night Watchman / Security Guard",
+      company: "Juwentus",
+      period: "March 2024 - March 2025",
       description: [
-        "Implemented high-performance network sockets in C.",
-        "Automated internal testing workflows and helper utilities using Python scripts.",
-        "Assisted in edge router configurations and network firewall policy management.",
+        "Night security guard duties on hotel premises."
       ],
-      technologies: ["C", "Python", "FastAPI", "Linux", "Network Sockets", "Bash"],
-      projectIds: [],
+      technologies: [],
+      isVisible: false,
+    },
+    {
+      id: "zabka",
+      role: "Store Associate",
+      company: "Żabka",
+      period: "May 2023 - September 2023",
+      description: [
+        "Retail store customer service and inventory management."
+      ],
+      technologies: [],
       isVisible: false,
     },
   ],

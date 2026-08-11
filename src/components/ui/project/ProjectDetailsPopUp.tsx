@@ -7,6 +7,8 @@ import type { Project, TechItem } from '../../../types/types';
 
 interface ProjectDetailsPopUpProps {
   usedTechnologiesLabel: string;
+  codeOnGithubLabel: string;
+  demoLinkLabel: string
   project: Project;
   techItemsMap: Map<string, TechItem>;
   onClose: () => void;
@@ -14,6 +16,8 @@ interface ProjectDetailsPopUpProps {
 
 const ProjectDetailsPopUp: React.FC<ProjectDetailsPopUpProps> = React.memo(({ 
   usedTechnologiesLabel,
+  codeOnGithubLabel,
+  demoLinkLabel,
   project, 
   techItemsMap, 
   onClose 
@@ -76,7 +80,7 @@ const ProjectDetailsPopUp: React.FC<ProjectDetailsPopUpProps> = React.memo(({
               rel="noreferrer noopener"
               className="flex-1 flex justify-center items-center gap-2 bg-gray-900 text-white py-3 px-4 rounded-lg hover:bg-gray-700 transition-colors"
             >
-              <FontAwesomeIcon icon={faCode} /> Kod na GitHubie
+              <FontAwesomeIcon icon={faCode} /> {codeOnGithubLabel}
             </a>
           )}
           {project.demoURL && (
@@ -86,7 +90,7 @@ const ProjectDetailsPopUp: React.FC<ProjectDetailsPopUpProps> = React.memo(({
               rel="noreferrer noopener"
               className="flex-1 flex justify-center items-center gap-2 bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-500 transition-colors"
             >
-              <FontAwesomeIcon icon={faArrowUpRightFromSquare} /> Zobacz Demo
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} /> {demoLinkLabel}
             </a>
           )}
         </div>

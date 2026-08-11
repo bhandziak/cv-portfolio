@@ -6,7 +6,7 @@ import { ProjectCard } from '../ui/project/ProjectCard';
 const LazyProjectDetailsPopUp = React.lazy(() => import('../ui/project/ProjectDetailsPopUp'));
 
 interface ProjectsSectionProps {
-  projectsText: {title: string; usedTechnologiesLabel: string;};
+  projectsText: {title: string; usedTechnologiesLabel: string;codeOnGithubLabel: string;demoLinkLabel: string};
   projectsData: Project[];
   techItemsData?: TechItem[];
 }
@@ -73,6 +73,8 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
       {selectedProject && (
           <LazyProjectDetailsPopUp
             usedTechnologiesLabel={projectsText.usedTechnologiesLabel}
+            codeOnGithubLabel={projectsText.codeOnGithubLabel}
+            demoLinkLabel={projectsText.demoLinkLabel}
             project={selectedProject}
             techItemsMap={techMap}
             onClose={handleCloseProjectDetails} 

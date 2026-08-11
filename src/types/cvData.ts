@@ -27,6 +27,8 @@ export interface CVData {
     projects: {
       title: string;
       usedTechnologiesLabel: string;
+      codeOnGithubLabel: string;
+      demoLinkLabel: string
     };
     experience: {
       title: string;

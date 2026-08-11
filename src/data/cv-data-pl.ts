@@ -30,11 +30,13 @@ export const cvData: CVData = {
     projects: {
       title: "Projekty",
       usedTechnologiesLabel: "Użyte technologie",
+      codeOnGithubLabel: "Kod na GitHubie",
+      demoLinkLabel: "Zobacz Demo"
     },
     experience: {
       title: "Doświadczenie",
       showMoreLabel: "Pokaż więcej",
-      showLessLabel: "Ukryj",
+      showLessLabel: "Ukryj"
     },
     contact: {
       title: "Kontakt",
@@ -334,51 +336,67 @@ export const cvData: CVData = {
       github: "https://github.com",
       linkedin: "https://linkedin.com",
       email: "bartek@example.com",
-      phone: "+48 123 456 789",
     },
   },
 
   experience: [
     {
-      id: "exp-1",
-      role: "Full-Stack Developer",
-      company: "Tech Solutions Sp. z o.o.",
-      period: "2024 - Obecnie",
+      id: "kosciuszkon",
+      role: "Uczestnik",
+      company: "Politechnika Krakowska",
+      period: "Maj 2026",
       description: [
-        "Projektowanie i rozwój skalowalnych aplikacji internetowych w oparciu o .NET Core i React z TypeScript.",
-        "Implementacja bezpiecznych protokołów komunikacji oraz optymalizacja architektur opartych o REST i WebSockets.",
-        "Tworzenie testów automatycznych API przy użyciu frameworka Robot Framework i pytest, co zmniejszyło liczbę regresji o 30%.",
+        "Praca w zespole 3 osobowym nad projektem i implementacją aplikacji treningowej wykorzystującej AI.",
+        "Aplikacja oferuje bezpieczne środowisko szkoleniowe do rozpoznawania oszustw, spamu i szkodliwych wiadomości.",
+        "Tematem Hackathon była “Cyber Security awareness”."
       ],
-      technologies: [".NET Core", "C#", "React", "TypeScript", "Tailwind CSS", "Robot Framework", "WebSockets"],
-      projectIds: ["omega-chat", "cyberguard"],
-      isVisible: false,
+      technologies: ['C# / .NET', 'React.js', 'TS', 'Tailwind', 'Integracja z AI / Gemini API'],
+      isVisible: true,
     },
     {
-      id: "exp-2",
-      role: "Junior Backend Developer",
-      company: "CyberSoft Systems",
-      period: "2023 - 2024",
+      id: "husty",
+      role: "Praktyki zawodowe",
+      company: "HUSTY M. Styczeń J. Hupert",
+      period: "Sierpień 2020",
       description: [
-        "Rozwijanie mikrousług w Java Spring Boot z wykorzystaniem ORM Hibernate do obsługi bazy danych PostgreSQL.",
-        "Analiza ruchu sieciowego i logów za pomocą Wireshark w celu identyfikacji wąskich gardeł w komunikacji sieciowej.",
-        "Współpraca w zespole programistycznym w metodologii Agile/Scrum nad bezpiecznymi rozwiązaniami webowymi.",
+        "Montaż systemów wykrywania wycieków i zalania dla firm oraz gospodarstw domowych.",
+        "Programowanie i testowanie płytek sterujących.",
+        "Lutowanie elementów elektronicznych.",
       ],
-      technologies: ["Java", "Spring Boot", "Hibernate", "PostgreSQL", "Wireshark", "REST API", "Git"],
-      projectIds: [],
-      isVisible: false,
+      technologies: [],
+      isVisible: true,
     },
     {
-      id: "exp-3",
-      role: "Software Developer Intern",
-      company: "Network Labs",
-      period: "2022 - 2023",
+      id: "bonito",
+      role: "Magazynier",
+      company: "Bonito",
+      period: "Październik 2025 - Obecnie",
       description: [
-        "Implementacja wysoce wydajnych modułów sieciowych w języku C z wykorzystaniem gniazd (sockets).",
-        "Automatyzacja procesów testowych oraz pisanie skryptów pomocniczych w języku Python.",
-        "Uczestnictwo w konfiguracji urządzeń brzegowych i zapór sieciowych (Firewall).",
+        "Kompletowanie zamówień, pakowanie, obsługa magazynu"
       ],
-      technologies: ["C", "Python", "FastAPI", "Linux", "Network Sockets", "Bash"],
-      projectIds: [],
+      technologies: [],
+      isVisible: false,
+    },
+        {
+      id: "juwentus",
+      role: "Stróż nocny / ochrona",
+      company: "Juwentus",
+      period: "Marzec 2024 - Marzec 2025",
+      description: [
+        "Nocny stróż na terenie hotelu"
+      ],
+      technologies: [],
+      isVisible: false,
+    },
+        {
+      id: "zabka",
+      role: "Pracownik sklepu",
+      company: "Żabka",
+      period: "Maj 2023 - Wrzesień 2023",
+      description: [
+        "Praca w sklepie"
+      ],
+      technologies: [],
       isVisible: false,
     },
   ],
