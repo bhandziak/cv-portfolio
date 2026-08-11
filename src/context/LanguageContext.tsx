@@ -6,14 +6,20 @@ import React, {
   useRef, 
   type ReactNode 
 } from 'react';
+import { cvData as cvDataPl } from '../data/cv-data-pl';
+import { cvData as cvDataEn } from '../data/cv-data-en';
 import type { CVData } from '../types/cvData';
+
+const dataMap: Record<'pl' | 'en', CVData> = {
+  pl: cvDataPl,
+  en: cvDataEn,
+};
 
 export type Language = 'pl' | 'en';
 
 interface LanguageContextType {
   language: Language;
   cvData: CVData | null;
-  isLoading: boolean;
   isPending: boolean;
   changeLanguage: (lang: Language) => void;
 }
@@ -29,31 +35,14 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   });
 
   const [cvData, setCvData] = useState<CVData | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isPending, startTransition] = useTransition();
 
-  const cache = useRef<Map<Language, CVData>>(new Map());
 
   // Load language data from ts files
-const loadLanguageData = async (targetLang: Language) => {
-    if (cache.current.has(targetLang)) {
-      setCvData(cache.current.get(targetLang)!);
-      return;
-    }
-
-    setIsLoading(true);
-    try {
-      const dataModule = await import(`../data/cv-data-${targetLang}`);
-      const data: CVData = dataModule.cvData || dataModule.default;
-
-      cache.current.set(targetLang, data);
-      setCvData(data);
-    } catch (error) {
-      console.error(`Failed to load data for language: ${targetLang}`, error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+const loadLanguageData = (targetLang: 'pl' | 'en') => {
+  const data = dataMap[targetLang];
+  setCvData(data);
+};
 
   useEffect(() => {
     loadLanguageData(language);
@@ -70,7 +59,7 @@ const loadLanguageData = async (targetLang: Language) => {
   };
 
   return (
-    <LanguageContext value={{ language, cvData, isLoading, isPending, changeLanguage }}>
+    <LanguageContext value={{ language, cvData, isPending, changeLanguage }}>
       {children}
     </LanguageContext>
   );

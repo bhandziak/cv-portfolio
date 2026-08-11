@@ -16,7 +16,7 @@ interface SectionConfig extends NavSection {
 }
 
 function MainPage() {
-  const { cvData, isLoading } = useLanguage();
+  const { cvData } = useLanguage();
 
   const sections = useMemo<SectionConfig[]>(() => {
     if (!cvData) return [];
@@ -95,13 +95,6 @@ function MainPage() {
     ];
   }, [cvData]);
 
-  if (isLoading || !cvData) {
-    return (
-      <div className="flex h-screen items-center justify-center text-cv-subtext">
-        Ładowanie danych...
-      </div>
-    );
-  }
 
   return (
     <div className="page-background">
