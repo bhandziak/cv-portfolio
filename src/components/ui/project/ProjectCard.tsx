@@ -45,10 +45,6 @@ export const ProjectCard = memo(function ProjectCard({
     >
       <div className="project-card-media-wrapper overflow-hidden rounded-t-lg aspect-video relative bg-gray-100">
         
-        {/* 
-          1. Obraz zawsze zostaje w DOM jako warstwa spodnia. 
-          Płynnie zanika, gdy wideo jest gotowe do odtworzenia.
-        */}
         <img
           src={project.thumbnailURL}
           alt={project.title}
@@ -58,7 +54,6 @@ export const ProjectCard = memo(function ProjectCard({
           loading="lazy"
         />
 
-        {/* 2. Tag wideo renderuje się i zaczyna pobierać dane, ale jest niewidoczny aż do momentu załadowania */}
         {isHovered && project.animationURL && (
           <video
             src={project.animationURL}
@@ -68,14 +63,13 @@ export const ProjectCard = memo(function ProjectCard({
             playsInline
             preload="auto"
             aria-hidden="true"
-            onCanPlay={handleVideoCanPlay} // Wyzwalacz załadowania
+            onCanPlay={handleVideoCanPlay}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
               isVideoLoaded ? 'opacity-100' : 'opacity-0'
             }`}
           />
         )}
 
-        {/* 3. Spinner ładowania pokazujący się nad obrazkiem, gdy wideo jeszcze się pobiera */}
         {isHovered && project.animationURL && !isVideoLoaded && (
           <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/20 backdrop-blur-[1px] transition-opacity">
             <div 

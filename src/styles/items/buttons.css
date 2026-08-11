@@ -12,7 +12,7 @@
 }
 
 .lang-switcher-btn--active {
-  @apply bg-cv-accent text-white shadow-sm cursor-default scale-105;
+  @apply bg-blue-600 text-white shadow-sm cursor-default scale-105;
 }
 
 .lang-switcher-btn:disabled {
