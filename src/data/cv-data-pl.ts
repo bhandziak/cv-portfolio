@@ -285,7 +285,7 @@ export const cvData: CVData = {
   },
   {
     id: 'system-zarzadzania-warsztatem',
-    title: 'System zarządzania warsztatem samochodowym',
+    title: 'System zarządzania warsztatem samochodowym (CRUD)',
     description: 'Aplikacja webowa typu CRUD wykonana w dwuosobowym zespole z wykorzystaniem React.js, ASP.NET Core oraz MS SQL. System obejmuje zarządzanie klientami, pojazdami, zleceniami serwisowymi, częściami oraz raportami, z uwzględnieniem ról użytkowników i autoryzacji.',
     technologyIds: ['react', 'csharp-dotnet', 'sql-postgres', 'ef-core', 'github-actions'],
     thumbnailURL: 'images/car_mechanic.png',
@@ -294,7 +294,7 @@ export const cvData: CVData = {
   },
   {
     id: 'chmura',
-    title: 'Chmura',
+    title: 'Wdrożenie i automatyzacja projektu na GCP',
     description: 'Projekt obejmował zaprojektowanie i wdrożenie zautomatyzowanej infrastruktury chmurowej w środowisku Google Cloud Platform z wykorzystaniem Terraform oraz Ansible do zarządzania zasobami i konfiguracji usług. Wdrożono konteneryzowane środowisko Docker zawierające aplikację WordPress oraz bazę MySQL, na którym uruchomiono blog.',
     technologyIds: ['terraform-ansible', 'docker', 'gcp', 'wordpress', 'mysql'],
     thumbnailURL: 'images/cloud.png',
@@ -333,9 +333,9 @@ export const cvData: CVData = {
   personalInfo: {
     location: "Kraków, Polska",
     socials: {
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-      email: "bartek@example.com",
+      github: "https://github.com/bhandziak",
+      linkedin: "https://www.linkedin.com/in/bart%C5%82omiej-handziak-7b178626a/",
+      email: "bartek.handziak@gmail.com",
     },
   },
 

@@ -291,7 +291,7 @@ export const cvData: CVData = {
     },
     {
       id: 'chmura',
-      title: 'Cloud Infrastructure',
+      title: 'Implementation and automation of the project on GCP',
       description: 'Automated cloud infrastructure design and deployment on Google Cloud Platform using Terraform and Ansible for resource provisioning and configuration management. Deployed a containerized Docker environment hosting a WordPress instance and MySQL database.',
       technologyIds: ['terraform-ansible', 'docker', 'gcp', 'wordpress', 'mysql'],
       thumbnailURL: 'images/cloud.png',
@@ -330,9 +330,9 @@ export const cvData: CVData = {
   personalInfo: {
     location: "Kraków, Poland",
     socials: {
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-      email: "bartek@example.com",
+      github: "https://github.com/bhandziak",
+      linkedin: "https://www.linkedin.com/in/bart%C5%82omiej-handziak-7b178626a/",
+      email: "bartek.handziak@gmail.com",
     },
   },
 
