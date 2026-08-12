@@ -1,50 +1,23 @@
 @import "tailwindcss";
 
-[data-theme="dark"] {
-  --bg-primary: #0b0f19;  
-  --bg-secondary: #111827; 
-  --bg-tertiary: #1f2937;
-  
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-
-  --accent-primary: #3b82f6;
-  --accent-hover: #60a5fa;
-  --accent-light: rgba(59, 130, 246, 0.15); 
-
-  --border-color: #1e293b;
-  --shadow-color: rgba(0, 0, 0, 0.4);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg-primary: #0b0f19;  
-    --bg-secondary: #111827; 
-    --bg-tertiary: #1f2937;
-    
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-
-    --accent-primary: #3b82f6;
-    --accent-hover: #60a5fa;
-    --accent-light: rgba(59, 130, 246, 0.15); 
-
-    --border-color: #1e293b;
-    --shadow-color: rgba(0, 0, 0, 0.4);
-  }
-}
-
 @theme {
-  --color-cv-bg: var(--bg-primary);
-  --color-cv-card: var(--bg-secondary);
-  --color-cv-surface: var(--bg-tertiary);
-  --color-cv-text: var(--text-primary);
-  --color-cv-subtext: var(--text-secondary);
-  --color-cv-muted: var(--text-muted);
-  --color-cv-accent: var(--accent-primary);
-  --color-cv-accent-hover: var(--accent-hover);
-  --color-cv-accent-light: var(--accent-light);
-  --color-cv-border: var(--border-color);
+  --color-cv-bg: #0b0f19;
+  --color-cv-card: #111827;
+  --color-cv-surface: #1f2937;
+
+  --color-cv-text: #f8fafc;
+  --color-cv-subtext: #94a3b8;
+  --color-cv-muted: #64748b;
+
+  --color-cv-accent: #3b82f6;
+  --color-cv-accent-hover: #60a5fa;
+  --color-cv-accent-light: rgba(59, 130, 246, 0.15);
+
+  --color-cv-border: #1e293b;
+  --shadow-cv: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+}
+
+html {
+  background-color: var(--color-cv-bg);
+  color: var(--color-cv-text)
 }

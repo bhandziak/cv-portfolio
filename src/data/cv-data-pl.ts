@@ -11,7 +11,7 @@ export const cvData: CVData = {
       contact: "Kontakt",
     },
     welcome: {
-      title: "Witaj, jestem Bartek",
+      title: "Bartłomiej Handziak",
       description: "Student PK (3. rok, kierunek Informatyka) | Frontend Developer",
     },
     aboutMe: {
@@ -107,7 +107,7 @@ export const cvData: CVData = {
   {
     id: 'html-css',
     name: 'HTML5/CSS3',
-    description: 'Budowanie responsywnych struktur i nowoczesnych layoutów.',
+    description: 'Budowanie responsywnych struktur, wykorzystanie biblioteki tailwind.',
     highlighted: false,
   },
   {
@@ -119,7 +119,7 @@ export const cvData: CVData = {
   {
     id: 'csharp-dotnet',
     name: 'C# / .NET',
-    description: 'Budowanie architektury REST API w ekosystemie ASP.NET Core. Implementacja mechanik gier i optymalizacja wydajność w silniku Unity. Wykorzystanie DI, SOLID i wzorce projektowe, Asynchroniczność, mapowanie ORM, tokeny JWT.',
+    description: 'Budowanie architektury REST API w ekosystemie ASP.NET Core. Implementacja mechanik gier i optymalizacja wydajność w silniku Unity. Wykorzystanie DI, SOLID i wzorce projektowe, asynchroniczność, mapowanie ORM, tokeny JWT.',
     highlighted: false,
   },
   {
@@ -131,7 +131,7 @@ export const cvData: CVData = {
   {
     id: 'cpp-c',
     name: 'C++ / C',
-    description: 'programowanie w środowisku Linux. Programowanie wieloprocesowe z myślą o rywalizacji procesów o zasoby systemowe, synchronizacja procesów, semafory, pamięć współdzielona, FIFO. OOP, SFML, programowanie GUI, biblioteki DLL.',
+    description: 'Programowanie w środowisku Linux. Programowanie wieloprocesowe z myślą o rywalizacji procesów o zasoby systemowe, synchronizacja procesów, semafory, pamięć współdzielona, FIFO. OOP, SFML, programowanie GUI, biblioteki DLL.',
     highlighted: false,
   },
   {
@@ -143,31 +143,31 @@ export const cvData: CVData = {
   {
     id: 'php',
     name: 'PHP',
-    description: 'Architektura MVC, obsługa baz PostgreSQL.',
+    description: 'Architektura MVC, obsługa bazy danych PostgreSQL.',
     highlighted: false,
   },
   {
     id: 'cisco',
     name: 'Urządzenia sieciowe CISCO',
-    description: 'konfiguracja routerów CISCO przez interfejs konsolowy',
+    description: 'Konfiguracja routerów CISCO poprzez interfejs konsolowy',
     highlighted: false,
   },
   {
     id: 'watchguard',
     name: 'Firewall WatchGuard',
-    description: 'polityki firewall, proxy, VPN, konfiguracja zabezpieczeń sieciowych.',
+    description: 'Polityki firewall, proxy, VPN, konfiguracja zabezpieczeń sieciowych.',
     highlighted: false,
   },
   {
     id: 'win-lin-server',
     name: 'Windows Serwer/ Linux Serwer',
-    description: 'administracja usługami serwerowymi, WWW, DHCP, użytkownicy i uprawnienia.',
+    description: 'Administracja usługami serwerowymi, WWW, DHCP, użytkownicy i uprawnienia.',
     highlighted: false,
   },
   {
     id: 'git-docker',
     name: 'Git / Docker',
-    description: 'wersjonowanie kodu, wykorzystanie branch’y w pracy zespołowej, usługi GitHub Pages.',
+    description: 'Wersjonowanie kodu, wykorzystanie branch’y w pracy zespołowej, usługi GitHub Pages.',
     highlighted: false,
   },
   {
@@ -179,7 +179,7 @@ export const cvData: CVData = {
   {
     id: 'robot-framework',
     name: 'Robot Framework',
-    description: 'automatyzacja testów E2E, tworzenie scenariuszy testowych na podstawie dokumentacji oraz interfejsu REST API.',
+    description: 'Automatyzacja testów E2E, tworzenie scenariuszy testowych na podstawie dokumentacji oraz interfejsu REST API.',
     highlighted: false,
   },
   {
@@ -197,25 +197,25 @@ export const cvData: CVData = {
   {
     id: 'mongodb',
     name: 'MongoDB',
-    description: 'kolekcje, dokumenty, filtrowanie, sortowanie danych.',
+    description: 'Kolekcje, dokumenty, filtrowanie, sortowanie danych.',
     highlighted: false,
   },
   {
     id: 'unity',
     name: 'Unity',
-    description: 'Tworzenie gier 2D typu space shooter, clicker.Znajomość systemu komponentów, zarządzania scenami, fizyki 2D, UI, animacji oraz cyklu życia obiektów Unity. Proceduralne generowanie map, komunikacja sieciowe z wykorzystaniem biblioteki Mirror, środowisko Android i Windows.',
+    description: 'Tworzenie gier 2D typu space shooter, clicker. Znajomość systemu komponentów, zarządzania scenami, fizyki 2D, UI, animacji oraz cyklu życia obiektów Unity. Proceduralne generowanie map, komunikacja sieciowe z wykorzystaniem biblioteki Mirror, środowisko Android i Windows.',
     highlighted: false,
   },
   {
     id: 'java-libgdx',
     name: 'Java libGDX',
-    description: 'tworzenie gier 2D, obsługa assetów, zarządzanie projektu w wykorzystaniem Gradle.',
+    description: 'Tworzenie gier 2D, obsługa assetów, zarządzanie projektu w wykorzystaniem Gradle.',
     highlighted: false,
   },
   {
     id: 'cpp-sfml',
     name: 'C++ SFML',
-    description: 'obsługa GUI i zdarzeń. Wykorzystanie assetów graficznych i dźwiękowych.',
+    description: 'Obsługa GUI i zdarzeń. Wykorzystanie assetów graficznych i dźwiękowych.',
     highlighted: false,
   },
   {
@@ -249,7 +249,7 @@ export const cvData: CVData = {
 {
     id: 'komunikator-czatowy',
     title: 'Komunikator czatowy',
-    description: 'Chat 1 – na – 1. stworzona we współpracy z moim znajomym, w której jestem odpowiedzialny za implementację frontendu. System zawiera funkcje rejestracji użytkowników, logowania z użyciem uwierzytelniania opartego na JWT oraz zarządzania znajomym. Frontend został zbudowany w oparciu o bibliotekę React.js i obsługuje komunikację w czasie rzeczywistym za pomocą SignalR.',
+    description: 'Chat 1 – na – 1. stworzona we współpracy z moim znajomym, w której byłem odpowiedzialny za implementację frontendu. System zawiera funkcje rejestracji użytkowników, logowania z użyciem uwierzytelniania opartego na JWT oraz zarządzania znajomym. Frontend został zbudowany w oparciu o bibliotekę React.js i obsługuje komunikację w czasie rzeczywistym za pomocą SignalR.',
     technologyIds: ['js', 'react', 'signalr', 'axios', 'html-css'],
     thumbnailURL: 'images/comunicator.png',
     animationURL: 'video/kombinat.mp4',
@@ -259,7 +259,7 @@ export const cvData: CVData = {
   {
     id: '2d-space-shooter',
     title: '2D space shooter',
-    description: 'Gra 2D typu space shooter, napisana na podstawie silnika Unity na platformę Android. Rozgrywka polega na przechodzeniu kolejnych etapów / fal pokonując stopniowo trudniejszych przeciwników. Wspiera rozgrywkę wieloosobową w trybie kooperacji – system oparty o bibliotekę Mirror. Zaimplementowano system lobby umożliwiający tworzenie i dołączanie do rozgrywek oraz komunikację w sieci lokalnej (LAN). Projekt obejmuje również proceduralne generowanie map.',
+    description: 'Projekt zespołowy 2 - osobowy. Gra 2D typu space shooter, napisana na podstawie silnika Unity na platformę Android. Rozgrywka polega na przechodzeniu kolejnych etapów / fal pokonując stopniowo trudniejszych przeciwników. Wspiera rozgrywkę wieloosobową w trybie kooperacji – system oparty o bibliotekę Mirror. Zaimplementowano system lobby umożliwiający tworzenie i dołączanie do rozgrywek oraz komunikację w sieci lokalnej (LAN). Projekt obejmuje również proceduralne generowanie map.',
     technologyIds: ['csharp-dotnet', 'unity', 'mirror'],
     thumbnailURL: 'images/space_shooter.png',
     animationURL: 'video/space_shooter.mp4',
@@ -304,7 +304,7 @@ export const cvData: CVData = {
   {
     id: 'epc-simulator-robot-tests',
     title: 'EPC Simulator Robot Tests',
-    description: 'Projekt automatyzacji testów z wykorzystaniem Robot Framework oraz Python, obejmujący przygotowanie scenarioszy testowych E2E dla symulatora systemu sieci EPC. Testy zostały zaprojektowane w oparciu o dostępny interfejs REST API oraz dokumentację.',
+    description: 'Projekt automatyzacji testów z wykorzystaniem Robot Framework oraz Python, obejmujący przygotowanie scenariuszy testowych E2E dla symulatora systemu sieci EPC. Testy zostały zaprojektowane w oparciu o dostępny interfejs REST API oraz dokumentację.',
     technologyIds: ['robot-framework', 'python', 'rest-api'],
     thumbnailURL: 'images/test.png',
     animationURL: '',
@@ -348,7 +348,7 @@ export const cvData: CVData = {
       description: [
         "Praca w zespole 3 osobowym nad projektem i implementacją aplikacji treningowej wykorzystującej AI.",
         "Aplikacja oferuje bezpieczne środowisko szkoleniowe do rozpoznawania oszustw, spamu i szkodliwych wiadomości.",
-        "Tematem Hackathon była “Cyber Security awareness”."
+        "Tematem Hackathonu była “Cyber Security awareness”."
       ],
       technologies: ['C# / .NET', 'React.js', 'TS', 'Tailwind', 'Integracja z AI / Gemini API'],
       isVisible: true,

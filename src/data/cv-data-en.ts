@@ -11,16 +11,16 @@ export const cvData: CVData = {
       contact: "Contact",
     },
     welcome: {
-      title: "Hi, I'm Bartek",
+      title: "Bartłomiej Handziak",
       description: "Computer Science Student (3rd year at CUT) | Frontend Developer",
     },
     aboutMe: {
       title: "About Me",
-      description: "I am a 6th-semester Computer Science student at Cracow University of Technology. I am developing my skills in software engineering, with a primary focus on building web applications using React. I craft applications emphasizing clean code readability, architectural scalability, and user experience. Concurrently, I expand my expertise in system administration, networking, and IT security, gaining practical experience with Windows and Linux systems, network devices, as well as QA and automation tools. In my daily workflow, I leverage AI tools to maintain high efficiency.",
+      description: "I am a 6th-semester Computer Science student at Cracow University of Technology. I am developing my skills in software engineering, with a primary focus on building web applications using React. I code applications emphasizing clean code readability, architectural scalability, and user experience. Concurrently, I expand my expertise in system administration, networking, and IT security, gaining practical experience with Windows and Linux systems, network devices, as well as QA and automation tools. In my daily workflow, I leverage AI tools to maintain high efficiency.",
     },
     techStack: {
       title: "Tech Stack",
-      description: "Technologies I work with.",
+      description: "Technologies I know",
       usedInProjectsLabel: "Used in projects",
       seeLabel: "View",
     },
@@ -104,7 +104,7 @@ export const cvData: CVData = {
     {
       id: 'html-css',
       name: 'HTML5/CSS3',
-      description: 'Building responsive structures and modern layouts.',
+      description: 'Building responsive structures, use of tailwind library.',
       highlighted: false,
     },
     {
@@ -256,7 +256,7 @@ export const cvData: CVData = {
     {
       id: '2d-space-shooter',
       title: '2D Space Shooter',
-      description: '2D space shooter game developed in Unity for Android. Gameplay revolves around clearing enemy waves with increasing difficulty. Supports cooperative multiplayer via the Mirror library. Features a lobby system for creating and joining rooms over LAN, alongside procedural map generation.',
+      description: '2-person project. 2D space shooter game developed in Unity for Android. Gameplay revolves around clearing enemy waves with increasing difficulty. Supports cooperative multiplayer via the Mirror library. Features a lobby system for creating and joining rooms over LAN, alongside procedural map generation.',
       technologyIds: ['csharp-dotnet', 'unity', 'mirror'],
       thumbnailURL: 'images/space_shooter.png',
       animationURL: 'video/space_shooter.mp4',
@@ -282,7 +282,7 @@ export const cvData: CVData = {
     },
     {
       id: 'system-zarzadzania-warsztatem',
-      title: 'Auto Repair Shop Management System',
+      title: 'Auto Repair Shop Management System (CRUD)',
       description: 'CRUD web application created in a two-person team using React.js, ASP.NET Core, and MS SQL. System handles management of clients, vehicles, repair orders, parts inventory, and analytical reports with role-based access control (RBAC).',
       technologyIds: ['react', 'csharp-dotnet', 'sql-postgres', 'ef-core', 'github-actions'],
       thumbnailURL: 'images/car_mechanic.png',
