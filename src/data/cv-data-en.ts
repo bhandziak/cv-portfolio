@@ -163,7 +163,7 @@ export const cvData: CVData = {
     },
     {
       id: 'git-docker',
-      name: 'Git / Docker',
+      name: 'Git',
       description: 'Code versioning, branching strategies for team collaboration, GitHub Pages deployments.',
       highlighted: false,
     },
