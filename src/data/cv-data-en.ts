@@ -256,7 +256,7 @@ export const cvData: CVData = {
     {
       id: '2d-space-shooter',
       title: '2D Space Shooter',
-      description: '2-person project. 2D space shooter game developed in Unity for Android. Gameplay revolves around clearing enemy waves with increasing difficulty. Supports cooperative multiplayer via the Mirror library. Features a lobby system for creating and joining rooms over LAN, alongside procedural map generation.',
+      description: '2 people project. 2D space shooter game developed in Unity for Android. Gameplay revolves around clearing enemy waves with increasing difficulty. Supports cooperative multiplayer via the Mirror library. Features a lobby system for creating and joining rooms over LAN, alongside procedural map generation.',
       technologyIds: ['csharp-dotnet', 'unity', 'mirror'],
       thumbnailURL: 'images/space_shooter.png',
       animationURL: 'video/space_shooter.mp4',
