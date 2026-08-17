@@ -314,7 +314,7 @@ export const cvData: CVData = {
       technologyIds: ['java-libgdx', 'java', 'gradle'],
       thumbnailURL: 'images/space_invaders.png',
       animationURL: 'video/space_invaders.mp4',
-      githubURL: 'https://github.com/bhandziak/Space_Invaders_Jav'
+      githubURL: 'https://github.com/bhandziak/Space_Invaders_Java'
     },
     {
       id: 'symulacja-przychodni',
