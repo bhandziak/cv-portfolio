@@ -1,32 +1,27 @@
-# React + TypeScript + Vite
+# Interactive Portfolio & CV
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive single-page architecture CV and interactive portfolio built with React 19, TypeScript, and Tailwind CSS v4.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Interactive Tech Stack:** Detailed breakdown of technical skills by domain
+* **Projects Showcase:** Interactive portfolio gallery with video demo
+* **Bilingual Support (PL / EN):** Seamless runtime language switching across all portfolio content and UI components
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Frontend Framework:** React 19 (Functional Components & Hooks)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS v4
+* **Build Tool:** Vite
 
-## Expanding the Oxlint configuration
+## ⚡ Installation
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+# 🌐 Deploment
+
+This application is configured for deployment on GitHub Pages. Website: [Click here](https://bhandziak.github.io)
