@@ -133,3 +133,18 @@
   display: flex;
   flex-direction: column;
 }
+
+
+.welcome-avatar {
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%;
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  border: 2px solid var(--color-cv-border);
+  box-shadow: 0 0 15px var(--color-cv-accent-light);
+}
